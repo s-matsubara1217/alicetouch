@@ -1,0 +1,65 @@
+// Foundation
+@use '../foundation/variables';
+@use '../foundation/mixins';
+
+// SECTION-TITLE01
+.sec-ttl01 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  .en {
+    font-size: 4.8rem;
+    font-family: variables.$font-Montserrat;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+    @include mixins.mq-down(md) {
+      font-size: 3.6rem;
+    }
+    @include mixins.mq-down(sm) {
+      font-size: 3.2rem;
+    }
+    span {
+      display: inline-block;
+      &:nth-child(odd) {
+        color: variables.$primary-color;
+      }
+      &:nth-child(even) {
+        color: variables.$primary-dark;
+      }
+    }
+  }
+  .ja {
+    margin-top: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.075em;
+    color: #fff;
+    line-height: 1.4;
+    @include mixins.mq-down(md) {
+      font-size: 1.4rem;
+    }
+    span {
+      color: variables.$primary-color;
+    }
+  }
+  &.-white {
+    .en,
+    .ja {
+      span {
+        color: #fff;
+      }
+    }
+  }
+  &.-center {
+    align-items: center;
+  }
+  &.-sm-left {
+    @include mixins.mq-down(sm) {
+      align-items: flex-start;
+    }
+  }
+}

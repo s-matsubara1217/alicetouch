@@ -1,0 +1,480 @@
+// Foundation
+@use '../foundation/mixins';
+@use '../foundation/variables';
+
+/* ============================================
+// FOOTER
+// ==========================================*/
+.footer {
+  &__recruit {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: url('../img/common/recruit_bg.jpg') no-repeat center / cover;
+    &:before,
+    &:after {
+      content: '';
+      width: 100%;
+      height: 52px;
+      position: absolute;
+      z-index: 1;
+    }
+    &:before {
+      top: 0;
+      right: 0;
+      background: url('../img/common/frame_blue02.svg') repeat-x left top /
+        1440px 52px;
+      @include mixins.mq-down(md) {
+        background-size: 720px 26px;
+      }
+      @include mixins.mq-down(sm) {
+        background-size: 360px 13px;
+      }
+    }
+    &:after {
+      bottom: 0;
+      right: 0;
+      background: url('../img/common/frame_blue02.svg') repeat-x left top /
+        1440px 52px;
+      transform: scale(-1);
+      @include mixins.mq-down(md) {
+        background-size: 720px 26px;
+      }
+      @include mixins.mq-down(sm) {
+        background-size: 360px 13px;
+      }
+    }
+    &__wrap {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 160px;
+      padding-bottom: 160px;
+      @include mixins.mq-down(md) {
+        padding-top: 100px;
+        padding-bottom: 140px;
+      }
+      @include mixins.mq-down(sm) {
+        padding-top: 80px;
+        padding-bottom: 100px;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 320px;
+        height: 264px;
+        background: url('../img/common/person05.png') no-repeat center / cover;
+        filter: drop-shadow(0px 10px 8px rgba(variables.$primary-dark, 0.2));
+        @include mixins.mq-down(md) {
+          width: 160px;
+          height: 132px;
+          right: 30px;
+        }
+        @include mixins.mq-down(sm) {
+          width: 100px;
+          height: 83px;
+          right: 20px;
+        }
+      }
+      .message {
+        margin-top: 30px;
+        color: #fff;
+        text-align: center;
+        font-size: 3.2rem;
+        line-height: 1.6;
+        opacity: 0;
+        @include mixins.mq-down(md) {
+          margin-top: 24px;
+          font-size: 2.4rem;
+        }
+        br {
+          display: none;
+          @include mixins.mq-down(md) {
+            display: block;
+          }
+        }
+        &.js-active {
+          @include mixins.animation(
+            fadein-b-40 400ms variables.$bezier-easeOutSine 200ms
+          );
+        }
+      }
+      .btn-box {
+        width: 240px;
+        height: 64px;
+        margin: 40px auto 0;
+        opacity: 0;
+        @include mixins.mq-down(md) {
+          margin-top: 32px;
+        }
+        &.js-active {
+          @include mixins.animation(
+            fadein-b-40 400ms variables.$bezier-easeOutSine 200ms
+          );
+        }
+      }
+    }
+  }
+  &__body {
+    padding-top: 60px;
+    padding-bottom: 120px;
+    background: variables.$bg-color01;
+    @include mixins.mq-down(md) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    @include mixins.mq-down(sm) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    &__wrap {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      .company {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mixins.mq-down(md) {
+          flex-direction: column;
+        }
+        &__logo {
+          width: 196px;
+          @include mixins.mq-down(md) {
+            width: 180px;
+          }
+          .link {
+            display: block;
+            width: 100%;
+            transition: opacity 300ms variables.$bezier-easeOutCubic;
+            @include mixins.mq-up(md) {
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+            .img-box {
+              padding-top: calc((64 / 196) * 100%);
+            }
+          }
+        }
+        &__sns {
+          position: absolute;
+          z-index: 1;
+          top: 12px;
+          right: 0;
+          padding: 12px 0;
+          display: inline-block;
+          border-radius: 5px;
+          background: variables.$bg-color01;
+          @include mixins.mq-down(md) {
+            position: relative;
+            top: inherit;
+            right: inherit;
+            margin-top: 12px;
+          }
+          &__wrap {
+            display: flex;
+            align-items: center;
+            .sns-ttl {
+              text-transform: uppercase;
+              font-family: variables.$font-Montserrat;
+              font-weight: 700;
+              margin-right: 12px;
+            }
+            .sns-links {
+              display: flex;
+              align-items: center;
+              &__item {
+                width: 32px;
+                height: 32px;
+                &:not(:last-child) {
+                  margin-right: 10px;
+                }
+                .link {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 99px;
+                  @include mixins.mq-up(md) {
+                    transition: opacity 300ms variables.$bezier-easeOutSine;
+                    &:hover {
+                      opacity: 0.8;
+                    }
+                  }
+                  &.-fb {
+                    background: #3b579d;
+                  }
+                  &.-tw {
+                    background: #1da1f2;
+                  }
+                  &.-ln {
+                    background: #27ad37;
+                  }
+                  .icon {
+                    width: 18px;
+                    .img-box {
+                      padding-top: 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .contact {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mixins.mq-down(md) {
+          margin-top: 12px;
+          flex-direction: column;
+        }
+        &__message {
+          width: 50%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          padding: 20px 25px;
+          border-right: 1px solid variables.$border-color;
+          @include mixins.mq-down(md) {
+            width: 100%;
+            justify-content: center;
+            padding: 0;
+            border-right: none;
+          }
+          .txt {
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 1.4;
+            @include mixins.mq-down(md) {
+              font-size: 1.5rem;
+            }
+          }
+        }
+        &__tel {
+          width: 50%;
+          @include mixins.mq-down(md) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          }
+          .link {
+            padding: 20px 25px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            @include mixins.mq-down(md) {
+              padding: 8px 20px;
+            }
+            .icon {
+              width: 16px;
+              margin-right: 8px;
+              @include mixins.mq-down(md) {
+                width: 14px;
+              }
+              .img-box {
+                padding-top: calc((26 / 15) * 100%);
+              }
+            }
+            .txt {
+              font-size: 3rem;
+              font-weight: 600;
+              font-family: variables.$font-Montserrat;
+              color: variables.$primary-color;
+              line-height: 1.4;
+              @include mixins.mq-down(md) {
+                font-size: 2.4rem;
+              }
+            }
+          }
+        }
+      }
+      .pages {
+        margin-top: 40px;
+        border-top: 1px solid variables.$border-color;
+        border-bottom: 1px solid variables.$border-color;
+        @include mixins.mq-down(md) {
+          margin-top: 24px;
+        }
+        &__list {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 32px 72px;
+          @include mixins.mq-down(xl) {
+            padding: 32px 40px;
+          }
+          @include mixins.mq-down(md) {
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            padding: 16px 20px;
+          }
+          @include mixins.mq-down(sm) {
+            padding: 32px 0px;
+          }
+          &__item {
+            &:not(:last-child) {
+              @include mixins.mq-down(md) {
+                margin-right: 20px;
+              }
+            }
+            .link {
+              position: relative;
+              z-index: 1;
+              display: block;
+              font-size: 1.6rem;
+              font-weight: 600;
+              transition: color 400ms variables.$bezier-easeOutCubic;
+              @include mixins.mq-up(md) {
+                &:hover {
+                  color: variables.$primary-dark;
+                }
+              }
+              @include mixins.mq-down(md) {
+                font-size: 1.5rem;
+              }
+              @include mixins.mq-down(sm) {
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
+      }
+      .complement {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include mixins.mq-down(md) {
+          margin-top: 20px;
+          flex-direction: column-reverse;
+        }
+        &__copy {
+          color: #999;
+          font-size: 1.2rem;
+          @include mixins.mq-down(md) {
+            margin-top: 12px;
+          }
+        }
+        &__analytics {
+          .link {
+            color: #999;
+            font-size: 1.1rem;
+            text-decoration: underline;
+            transition: opacity 400ms variables.$bezier-easeOutCubic;
+            @include mixins.mq-up(md) {
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+      & > .bubble01 {
+        width: 140px;
+        position: absolute;
+        z-index: -1;
+        top: -160px;
+        left: 160px;
+        opacity: 0.4;
+        @include mixins.animation(waveY-20 8000ms linear infinite);
+        @include mixins.mq-down(md) {
+          width: 80px;
+          top: -120px;
+          left: 20px;
+        }
+        @include mixins.mq-down(sm) {
+          top: -100px;
+          left: -40px;
+        }
+        .img-box {
+          padding-top: 100%;
+        }
+      }
+    }
+  }
+}
+.front-page {
+  .footer {
+    &__recruit {
+      &:before {
+        background-image: url('../img/common/frame_blue01.svg');
+      }
+    }
+  }
+}
+.lower-kyujin_d {
+  .footer {
+    &__body {
+      padding-bottom: 140px;
+      @include mixins.mq-down(md) {
+        padding-bottom: 92px;
+      }
+    }
+  }
+}
+
+/* ============================================
+// PAGE-TOP
+// ==========================================*/
+.js-scroll .pageTop {
+  transform: translateX(0);
+}
+.pageTop {
+  position: fixed;
+  z-index: 25;
+  bottom: 20px;
+  right: 20px;
+  transform: translateX(100px);
+  transition: transform 400ms variables.$bezier-easeOutSine;
+  .link {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: variables.$third-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mixins.mq-up(md) {
+      transition: background-color 400ms variables.$bezier-easeOutSine;
+      &:hover {
+        background-color: variables.$third-dark;
+      }
+    }
+    @include mixins.mq-down(md) {
+      width: 48px;
+      height: 48px;
+    }
+    .icon {
+      width: 20px;
+      @include mixins.mq-down(md) {
+        width: 16px;
+      }
+      .img-box {
+        padding-top: 100%;
+      }
+    }
+  }
+}
+.lower-kyujin_d {
+  .pageTop {
+    bottom: 112px;
+    @include mixins.mq-down(md) {
+      bottom: 80px;
+    }
+  }
+}

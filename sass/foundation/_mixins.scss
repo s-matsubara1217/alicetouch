@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+@use "./variables";
+
+//========================================
+// Mixins
+//========================================
+
+@mixin mq-up($breakpoint: md) {
+  @media #{map-get(variables.$breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get(variables.$breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
+// ANIMATION
+@mixin keyframes($animation-name: animaton) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+@mixin animation($animation-name) {
+  -webkit-animation: $animation-name;
+  animation: $animation-name;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}

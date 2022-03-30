@@ -1,0 +1,106 @@
+// Foundation
+@use '../foundation/variables';
+@use '../foundation/mixins';
+
+// LOWER-MAIN-MV
+.l-main {
+  background: variables.$bg-color01;
+  &__mv {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    background: variables.$bg-color03;
+    padding-top: 180px;
+    padding-bottom: 140px;
+    @include mixins.mq-down(xxl) {
+      padding-top: 140px;
+      padding-bottom: 100px;
+    }
+    @include mixins.mq-down(md) {
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
+    @include mixins.mq-down(sm) {
+      padding-top: 100px;
+      padding-bottom: 55px;
+    }
+    &:before {
+      content: '';
+      width: 100%;
+      height: 52px;
+      position: absolute;
+      z-index: 1;
+      bottom: -1px;
+      right: 0;
+      background: url('../img/common/frame_blue02.svg') repeat-x left top /
+        1440px 52px;
+      transform: scale(-1);
+      @include mixins.mq-down(md) {
+        background-size: 720px 26px;
+      }
+      @include mixins.mq-down(sm) {
+        background-size: 360px 13px;
+      }
+    }
+    &__bg {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      .img-box {
+        height: 100%;
+        opacity: 0.65;
+      }
+    }
+    &__wrap {
+      width: 100%;
+      height: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .lmv-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        &__en {
+          font-size: 4.8rem;
+          font-family: variables.$font-Montserrat;
+          font-weight: 700;
+          color: #fff;
+          line-height: 1.5;
+          text-transform: uppercase;
+          text-shadow: 4px 4px 16px rgba(0,0,0,0.3);
+
+          @include mixins.mq-down(md) {
+            font-size: 4rem;
+          }
+          @include mixins.mq-down(sm) {
+            font-size: 3.2rem;
+          }
+        }
+        &__ja {
+          font-size: 1.5rem;
+          font-weight: 600;
+          line-height: 1.6;
+          color: #fff;
+          letter-spacing: 0.12em;
+          margin-top: 8px;
+          text-shadow: 4px 4px 16px rgba(0,0,0,0.3);
+          @include mixins.mq-down(md) {
+            font-size: 1.3rem;
+            margin-top: 0;
+          }
+          @include mixins.mq-down(sm) {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
