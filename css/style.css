@@ -2472,7 +2472,7 @@ a {
 }
 .l-main__mv__bg .img-box {
   height: 100%;
-  opacity: 0.65;
+  opacity: 0.8;
 }
 .l-main__mv__wrap {
   width: 100%;
@@ -5462,6 +5462,7 @@ a {
   position: relative;
   z-index: 1;
   margin-bottom: -16px;
+  padding-right: 8%;
 }
 .lower-interview_l .interview .contents__list__item .link .job .txt {
   display: inline-block;
