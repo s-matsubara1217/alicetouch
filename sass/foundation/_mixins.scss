@@ -33,3 +33,21 @@
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+
+// keepAspect
+@mixin keepAspect($persentage){
+	position: relative;
+	z-index: 1;
+	&:before{
+		content: '';
+		display: block;
+		padding-top: $persentage;
+	}
+	img{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}

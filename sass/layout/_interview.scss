@@ -309,20 +309,47 @@
     }
   }
   .interview {
+    max-width: 1200px;
+    margin: 0 auto;
+
     &__head {
       .profile {
-        .budge {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: #fff;
+        position: relative;
 
+        .budge {
+          font-size: 1.9rem;
+          color: #fff;
+          background-color: variables.$primary-color;
+          padding: 2px 24px;
+          border-radius: 4px 4px 4px 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translateY(-50%);
+          z-index: 2;
         }
         .img-holder {
+          flex: 0 0 52.5%;
+          max-width: 630px;
+          margin-right: 5%;
+
           .img {
-            
+            @include mixins.keepAspect(72%);
           }
         }
         .txt-holder {
+          flex: 1 1 auto;
+
           .name-holder {
             .name {
+              font-size: 2rem;
+
               .bold {
+                font-size: 4rem;
 
               }
             }
@@ -423,8 +450,15 @@
           }
         }
       }
+      .btn-box {
+
+      }
+      .coverage-date {
+
+      }
     }
-    
+
+    // swiper
     .oneday {
       &__container {
           padding-top: 40px;
