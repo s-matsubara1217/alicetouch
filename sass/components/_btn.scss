@@ -88,6 +88,15 @@
     @include mixins.mq-down(sm) {
       font-size: 1.4rem;
     }
+
+    &.-reverse {
+      &:before {
+        transform: scale(-1,1);
+        right: auto;
+        left: 20px;
+      }
+    }
+
     &:before {
       content: '';
       flex-shrink: 0;

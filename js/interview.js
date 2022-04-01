@@ -1,7 +1,7 @@
 const new_jobs = new Swiper('.oneday__container', {
 	// デフォルトの設定
 	slidesPerView: 3,
-	spaceBetween: 48,
+	spaceBetween: 32,
 
 	navigation: {
 		nextEl: '.swiper-button-next',

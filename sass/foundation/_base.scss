@@ -209,3 +209,21 @@ a {
     padding-left: 20px;
   }
 }
+
+.eng {
+  font-family: variables.$font-Montserrat;
+}
+
+/* innerWrap */
+.innerWrap {
+  max-width: 1280px;
+  padding: 0 40px;
+  margin: 0 auto;
+
+  @include mixins.mq-down(md) {
+    padding: 0 30px;
+  }
+  @include mixins.mq-down(sm) {
+    padding: 0 15px;
+  }
+}
