@@ -5824,6 +5824,11 @@ a {
 .lower-interview_d .interview__head .features {
   margin-top: 92px;
 }
+@media screen and (max-width: 768px) {
+  .lower-interview_d .interview__head .features {
+    margin-top: 60px;
+  }
+}
 .lower-interview_d .interview__head .features .head .ttl {
   font-size: 3rem;
   line-height: 1.6;
@@ -5981,6 +5986,12 @@ a {
   .lower-interview_d .interview__body {
     margin-top: 56px;
   }
+}
+.lower-interview_d .interview__body .sec__interview .head .sec-ttl01 .en span:first-child {
+  color: #216cc4;
+}
+.lower-interview_d .interview__body .sec__interview .head .sec-ttl01 .en span:nth-child(even) {
+  color: #1c9dd2;
 }
 .lower-interview_d .interview__body .sec__interview .body {
   margin-top: 56px;
@@ -6166,7 +6177,7 @@ a {
   z-index: 1;
 }
 .lower-interview_d .interview__body .sec__question:before {
-  top: 0;
+  top: -1px;
   right: 0;
   background: url("../img/common/frame_blue02.svg") repeat-x left top/1440px 52px;
 }
@@ -6181,7 +6192,7 @@ a {
   }
 }
 .lower-interview_d .interview__body .sec__question:after {
-  bottom: 0;
+  bottom: -1px;
   right: 0;
   background: url("../img/common/frame_blue02.svg") repeat-x left top/1440px 52px;
   transform: scale(-1);
@@ -6352,15 +6363,15 @@ a {
 @media screen and (max-width: 768px) {
   .lower-interview_d .interview__body .sec__oneday .oneday__inner .bubble01 {
     width: 140px;
-    top: -120px;
-    left: -24px;
+    top: -102px;
+    left: 16px;
   }
 }
 @media screen and (max-width: 480px) {
   .lower-interview_d .interview__body .sec__oneday .oneday__inner .bubble01 {
     width: 120px;
-    top: -80px;
-    left: -24px;
+    top: -102px;
+    left: 16px;
   }
 }
 .lower-interview_d .interview__body .sec__oneday .oneday__inner .bubble01 .img-box {
@@ -6386,7 +6397,8 @@ a {
 @media screen and (max-width: 768px) {
   .lower-interview_d .interview__body .sec__oneday .oneday__inner .bubble02 {
     width: 72px;
-    top: 0;
+    top: 24px;
+    right: 8px;
   }
 }
 .lower-interview_d .interview__body .sec__oneday .oneday__inner .bubble02 .img-box {
@@ -6425,7 +6437,7 @@ a {
   background-color: #89cce8;
   width: 100%;
   height: 100%;
-  transform: translateX(100%);
+  transform: translate(99%);
   position: absolute;
   top: 0;
   right: 0;

@@ -502,6 +502,7 @@
       .features {
         margin-top: 92px;
         @include mixins.mq-down(md) {
+          margin-top: 60px;
         }
 
         .head {
@@ -646,7 +647,18 @@
 
       .sec__interview {
         .head {
-
+          .sec-ttl01 {
+            .en {
+              span {
+                &:first-child {
+                  color: variables.$primary-dark;
+                }
+                &:nth-child(even) {
+                  color: variables.$primary-color;
+                }
+              }
+            }
+          }
         }
         .body {
           margin-top: 56px;
@@ -807,7 +819,7 @@
           z-index: 1;
         }
         &:before {
-          top: 0;
+          top: -1px;
           right: 0;
           background: url('../img/common/frame_blue02.svg') repeat-x left top /
             1440px 52px;
@@ -819,7 +831,7 @@
           }
         }
         &:after {
-          bottom: 0;
+          bottom: -1px;
           right: 0;
           background: url('../img/common/frame_blue02.svg') repeat-x left top /
             1440px 52px;
@@ -976,13 +988,13 @@
               }
               @include mixins.mq-down(md) {
                 width: 140px;
-                top: -120px;
-                left: -24px;
+                top: -102px;
+                left: 16px;
               }
               @include mixins.mq-down(sm) {
                 width: 120px;
-                top: -80px;
-                left: -24px;
+                top: -102px;
+                left: 16px;
               }
               .img-box {
                 padding-top: 100%;
@@ -1001,7 +1013,8 @@
               }
               @include mixins.mq-down(md) {
                 width: 72px;
-                top: 0;
+                top: 24px;
+                right: 8px;
               }
               .img-box {
                 padding-top: 100%;
