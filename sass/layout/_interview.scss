@@ -12,7 +12,6 @@
     padding-top: 100px;
     padding-bottom: 140px;
     @include mixins.mq-down(md) {
-      padding-top: 48px;
       padding-bottom: 56px;
     }
 
@@ -297,14 +296,32 @@
 
   .l-main {
     padding-bottom: 56px;
+    @include mixins.mq-down(md) {
+    }
     &__mv {
       padding-top: 140px;
       padding-bottom: 208px;
+      @media screen and (min-width:768px) and (max-width:1024px) {
+        padding-top: 170px;
+        padding-bottom: 178px;
+      }
+      @include mixins.mq-down(md) {
+        padding-top: 108px;
+        padding-bottom: 47px;
+      }
       &__lead {
         .lead {
           font-size: 3.4rem;
           color: #fff;
           text-align: center;
+          line-height: 1.6;
+
+          @include mixins.mq-down(md) {
+            font-size: 2.4rem;
+            @include mixins.mq-down(md) {
+              text-align: left;
+            }
+          }
         }
       }
     }
@@ -332,6 +349,7 @@
           @include mixins.mq-down(sm) {
             width: 120px;
             height: 120px;
+            bottom: -60px;
           }
         }
         &.js-active {
@@ -351,6 +369,13 @@
           margin-top: -150px;
           z-index: 10;
           box-shadow: 0 16px 24px rgba(variables.$primary-dark, 0.1);
+          @media screen and (min-width:768px) and (max-width:1024px) {
+            margin-top: -120px;
+          }
+          @include mixins.mq-down(md) {
+            margin-top: 42px;
+            display: block;
+          }
         }
 
         .budge {
@@ -364,17 +389,31 @@
           left: 0;
           transform: translateY(-50%);
           z-index: 2;
+
+          @include mixins.mq-down(md) {
+            font-size: 1.6rem;
+            padding: 2px 18px;
+          }
         }
         .img-holder {
           flex: 0 0 52.5%;
           max-width: 630px;
           margin-right: 5%;
+          @include mixins.mq-down(md) {
+            margin-right: 0;
+          }
 
           .img {
             @include mixins.keepAspect(72%);
 
             img {
               border-radius: 0 0 0 10px;
+              @media screen and (min-width:768px) and (max-width:1024px) {
+                border-radius: 0;
+              }
+              @include mixins.mq-down(md) {
+                border-radius: 0 10px 0 0;
+              }
             }
           }
         }
@@ -382,11 +421,18 @@
           flex: 1 1 auto;
           padding: 32px 0;
           margin-right: 4%;
+          @include mixins.mq-down(md) {
+            padding: 24px;
+            margin-right: 0;
+          }
 
           .name-holder {
             color: variables.$primary-dark;
             padding-bottom: 24px;
             position: relative;
+            @include mixins.mq-down(md) {
+              padding-bottom: 16px;
+            }
 
             &:before {
               content: '';
@@ -404,12 +450,19 @@
             .name {
               font-size: 2rem;
               line-height: 1;
+              @include mixins.mq-down(md) {
+                font-size: 1.6rem;
+              }
 
               .bold {
                 font-size: 4rem;
                 font-family: variables.$font-Montserrat;
                 display: inline-block;
                 margin-right: 12px;
+                @include mixins.mq-down(md) {
+                  font-size: 3rem;
+                  margin-right: 8px;
+                }
               }
             }
             .year {
@@ -427,6 +480,9 @@
                 &:first-letter {
                   color: variables.$primary-dark;
                 }
+                @include mixins.mq-down(md) {
+                  font-size: 2.2rem;
+                }
               }
               .ja {
                 color: variables.$primary-dark;
@@ -436,30 +492,47 @@
             }
             .desc {
               margin-top: 8px;
+              @include mixins.mq-down(md) {
+                margin-top: 0;
+              }
             }
           }
         }
       }
       .features {
         margin-top: 92px;
+        @include mixins.mq-down(md) {
+        }
 
         .head {
           .ttl {
             font-size: 3rem;
             line-height: 1.6;
             text-align: center;
+            @include mixins.mq-down(md) {
+              font-size: 2.2rem;
+            }
           }
           .c-blue {
             font-size: 4rem;
             color: variables.$primary-dark;
+            @include mixins.mq-down(md) {
+              font-size: 3rem;
+            }
           }
           .c-lightblue {
             font-size: 4rem;
             color: variables.$primary-color;
+            @include mixins.mq-down(md) {
+              font-size: 3rem;
+            }
           }
         }
         .body {
           margin-top: 60px;
+          @include mixins.mq-down(md) {
+            margin-top: 36px;
+          }
         }
 
         &__inner {
@@ -469,6 +542,9 @@
           display: flex;
           justify-content: flex-start;
           align-items: stretch;
+          @include mixins.mq-down(md) {
+            display: block;
+          }
 
           &__item {
             width: 30%;
@@ -477,6 +553,14 @@
             border-radius: 10px;
             box-shadow: 0 16px 24px rgba(variables.$primary-dark, 0.1);
             position: relative;
+            @include mixins.mq-down(md) {
+              width: 85%;
+              margin: 32px auto 0;
+
+              &:first-child {
+                margin-top: 0;
+              }
+            }
 
             &:before {
               content: '';
@@ -490,6 +574,9 @@
               top: 0;
               left: 50%;
               transform: translate(-50%,-50%);
+              @include mixins.mq-down(md) {
+                transform: translate(-50%,-50%) scale(0.65);
+              }
             }
 
             &:nth-child(3n + 1) {
@@ -534,11 +621,18 @@
                   );
                 }
               }
+              @include mixins.mq-down(md) {
+                margin-right: auto;
+              }
             }
 
             .txt {
               font-size: 1.8rem;
               padding: 60px 32px 40px 40px;
+              @include mixins.mq-down(md) {
+                font-size: 1.6rem;
+                padding: 36px 20px 32px;
+              }
             }
           }
         }
@@ -546,6 +640,9 @@
     }
     &__body {
       margin-top: 96px;
+      @include mixins.mq-down(md) {
+        margin-top: 56px;
+      }
 
       .sec__interview {
         .head {
@@ -554,6 +651,10 @@
         .body {
           margin-top: 56px;
           position: relative;
+          @include mixins.mq-down(md) {
+            margin-top: 32px;
+          }
+
           &:before {
             content: '';
             width: 204px;
@@ -567,6 +668,8 @@
             @include mixins.mq-down(md) {
               width: 150px;
               height: 150px;
+              bottom: -16px;
+              right: -36px;
             }
             @include mixins.mq-down(sm) {
               width: 120px;
@@ -612,6 +715,10 @@
                 justify-content: flex-start;
                 align-items: flex-start;
                 margin-top: 60px;
+                @include mixins.mq-down(md) {
+                  display: block;
+                  margin-top: 36px;
+                }
 
                 &:first-child {
                   margin-top: 0;
@@ -622,6 +729,10 @@
                   max-width: 530px;
                   margin-right: 5%;
                   margin-top: 8px;
+                  @include mixins.mq-down(md) {
+                    margin-right: 0;
+                    margin-top: 0;
+                  }
 
                   .img {
                     @include mixins.keepAspect(70.4%);
@@ -633,12 +744,18 @@
                 }
                 .txt-holder {
                   flex: 1 1 auto;
+                  @include mixins.mq-down(md) {
+                    margin-top: 16px;
+                  }
 
                   .lead {
                     font-size: 2.2rem;
                     color: variables.$primary-dark;
                     line-height: 1.6;
                     position: relative;
+                    @include mixins.mq-down(md) {
+                      font-size: 2rem;
+                    }
 
                     &:before {
                       content: '';
@@ -649,10 +766,17 @@
                       position: absolute;
                       bottom: -16px;
                       left: -100px;
+                      @include mixins.mq-down(md) {
+                        width: 100%;
+                        left: auto;
+                      }
                     }
                   }
                   .desc {
                     margin-top: 40px;
+                    @include mixins.mq-down(md) {
+                      margin-top: 32px;
+                    }
                   }
                 }
               }
@@ -668,6 +792,12 @@
         background-size: cover;
         background-position: center center;
         position: relative;
+        @include mixins.mq-down(md) {
+          margin-top: 32px;
+          padding-top: 56px;
+          padding-bottom: 68px;
+        }
+
         &:before,
         &:after {
           content: '';
@@ -708,6 +838,9 @@
           }
           .body {
             margin-top: 40px;
+            @include mixins.mq-down(md) {
+              margin-top: 32px;
+            }
           }
 
           &__list {
@@ -715,11 +848,23 @@
             justify-content: flex-start;
             align-items: stretch;
             flex-wrap: wrap;
+            @include mixins.mq-down(md) {
+              display: block;
+            }
 
             &__item {
               width: 30%;
               margin-right: 5%;
               max-width: 365px;
+              @include mixins.mq-down(md) {
+                width: 100%;
+                margin-right: 0;
+                margin-top: 24px;
+
+                &:first-child {
+                  margin-top: 0;
+                }
+              }
 
               &:nth-child(3n + 1) {
                 &.js-active {
@@ -770,6 +915,9 @@
                 color: #fff;
                 position: relative;
                 padding-left: 44px;
+                @media screen and (min-width:768px) and (max-width:1024px) {
+                  font-size: 1.7rem;
+                }
 
                 &:before {
                   content: 'Q';
@@ -793,7 +941,12 @@
                 background-color: #fff;
                 border-radius: 10px;
                 margin-top: 24px;
-                padding: 32px 48px;
+                padding: 32px 44px;
+
+                @include mixins.mq-down(md) {
+                  margin-top: 16px;
+                  padding: 24px;
+                }
               }
             }
           }
@@ -801,7 +954,9 @@
       }
       .sec__oneday {
         margin-top: 64px;
-        
+        @include mixins.mq-down(md) {
+          margin-top: 40px;
+        }
 
         .oneday {
 
@@ -816,6 +971,9 @@
               opacity: 0.4;
               z-index: 10;
               @include mixins.animation(waveY-20 8000ms linear 0ms infinite);
+              @media screen and (min-width:768px) and (max-width:1024px) {
+                right: 32px;
+              }
               @include mixins.mq-down(md) {
                 width: 140px;
                 top: -120px;
@@ -838,10 +996,12 @@
               right: 172px;
               opacity: 0.4;
               @include mixins.animation(waveY-20 10000ms linear 0ms infinite);
+              @media screen and (min-width:768px) and (max-width:1024px) {
+                right: 240px;
+              }
               @include mixins.mq-down(md) {
                 width: 72px;
                 top: 0;
-                right: 48px;
               }
               .img-box {
                 padding-top: 100%;
@@ -857,15 +1017,20 @@
             border-radius: 0 20px 20px 0;
             position: relative;
             z-index: 10;
+            @include mixins.mq-down(md) {
+              padding: 24px 80px 24px 1000px;
+              margin-left: -990px;
+            }
           }
           .body {
             background-color: #89cce8;
-            padding-top: 100px;
-            padding-bottom: 72px;
-            padding-left: 56px;
+            padding: 100px 0 72px 56px;
             margin-top: -32px;
             border-radius: 0 0 0 30px;
             position: relative;
+            @include mixins.mq-down(md) {
+              padding: 72px 0 58px 32px;
+            }
 
             &::before {
               content: '';
@@ -887,6 +1052,9 @@
         width: 240px;
         height: 64px;
         margin: 98px auto 0;
+        @include mixins.mq-down(md) {
+          margin: 80px auto 0;
+        }
       }
       .coverage-date {
         text-align: center;
@@ -900,13 +1068,13 @@
         overflow: visible;
       }
       &__slide {
-          padding: 40px 48px;
           border: 4px solid variables.$primary-dark;
           border-radius: 10px;
           background-color: #fff;
           position: relative;
+          padding: 40px 48px;
           @include mixins.mq-down(md) {
-              padding: 24px 12px 16px 16px;
+            padding: 32px 20px 28px 16px;
           }
           &:not(:last-child) {
               &:before {
@@ -927,19 +1095,23 @@
               }
           }
           time {
-              width: 98px;
-              padding: 10px 0;
-              background-color: variables.$primary-dark;
-              font-size: 2rem;
-              border-radius: 2rem;
-              line-height: 1;
-              color: #fff;
-              display: inline-block;
-              text-align: center;
-              position: absolute;
-              top: 0;
-              left: 28px;
-              transform: translateY(-50%);
+            width: 98px;
+            padding: 10px 0;
+            background-color: variables.$primary-dark;
+            font-size: 2rem;
+            border-radius: 2rem;
+            line-height: 1;
+            color: #fff;
+            display: inline-block;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 28px;
+            transform: translateY(-50%);
+            @include mixins.mq-down(md) {
+              font-size: 1.7rem;
+              left: 20px;
+            }
           }
           dt {
               font-size: 2rem;
@@ -980,6 +1152,10 @@
         height: 72px;
         position: relative;
         border-radius: 0 10px 10px 0;
+        @include mixins.mq-down(md) {
+          width: 56px;
+          height: 56px;
+        }
 
         &:before {
           content: '';
@@ -993,6 +1169,9 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%,-50%);
+          @include mixins.mq-down(md) {
+            transform: translate(-50%,-50%) scale(0.9);
+          }
         }
       }
       .swiper-button-prev {

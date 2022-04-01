@@ -227,3 +227,17 @@ a {
     padding: 0 15px;
   }
 }
+
+/*------------------------------
+ 表示 / 非表示
+------------------------------*/
+.u-pcOnly {
+  @include mixins.mq-down(md) {
+    display: none;
+  }
+}
+.u-spOnly {
+  @include mixins.mq-up(md) {
+    display: none;
+  }
+}
