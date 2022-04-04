@@ -1,0 +1,401 @@
+// Foundation
+@use '../foundation/variables';
+@use '../foundation/mixins';
+
+/* ============================================
+// お知らせ
+// ==========================================*/
+
+// 共通
+.lower-information_l,
+.lower-information_d {
+  .info {
+    &__inner {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+    &__main {
+      flex: 0 0 79%;
+      max-width: 950px;
+      margin-right: 4%;
+    }
+    &__sub {
+      flex: 0 0 17%;
+      max-width: 200px;
+      position: relative;
+      z-index: 2;
+
+      .block {
+        margin-top: 28px;
+        &:first-child {
+          margin-top: 0;
+        }
+
+        .head {
+          font-family: variables.$font-Montserrat;
+          font-weight: bold;
+          color: variables.$primary-color;
+          font-size: 1.8rem;
+          border-bottom: 1px solid variables.$primary-color;
+
+        }
+        .body {
+          .list {
+            &__item {
+
+              &:last-child {
+                &::before {
+                  content: none;
+                }
+              }
+
+              a {
+                display: block;
+                padding: 8px 0;
+                position: relative;
+                padding-left: 20px;
+                transition: color 0.3s;
+
+                @include mixins.mq-up(md) {
+                  &:hover {
+                    color: variables.$primary-dark;
+                  }
+                }
+
+                &:before {
+                  content: "";
+                  height: 1px;
+                  width: 100%;
+                  display: inline-block;
+                  background-image: linear-gradient(to right, #adadad, #adadad 4px, transparent 4px, transparent 6px);
+                  background-size: 6px 1px;
+                  background-repeat: repeat-x;
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                }
+                &:after {
+                  content: '>';
+                  color: variables.$primary-color;
+                  font-size: 1.5rem;
+                  position: absolute;
+                  top: 14px;
+                  left: 0;
+                  line-height: 1;
+                }
+              }
+            }
+          }
+        }
+
+        &.-search {
+          .head {
+            border: none;
+          }
+          .body {
+            .search-box {
+              display: flex;
+              justify-content: flex-start;
+
+              .search {
+                &__word {
+                  flex: 0 0 76.5%;
+                  max-width: 153px;
+
+                  input {
+                    background-color: #ddf0f8;
+                    border: 1px solid variables.$primary-color;
+                  }
+                }
+                &__btn {
+                  flex: 0 0 47px;
+                  max-width: 47px;
+
+                  .submit-btn-holder {
+                    display: block;
+                    position: relative;
+                    transition: opacity 0.3s;
+
+                    @include mixins.mq-up(md) {
+                      &:hover {
+                        opacity: 0.7;
+                      }
+                    }
+
+                    &::before {
+                      content: '';
+                      display: inline-block;
+                      background-image: url(../img/common/ico_search_white.png);
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      width: 14px;
+                      height: 14px;
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%,-50%);
+                      pointer-events: none;
+                    }
+                  }
+                  input {
+                    background-color:  variables.$primary-color;
+                    border: 1px solid variables.$primary-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+  .l-main {
+    padding-bottom: 108px;
+  }
+  .bubble01 {
+    width: 180px;
+    position: absolute;
+    z-index: 1;
+    top: -120px;
+    right: 156px;
+    opacity: 0.4;
+    pointer-events: none;
+    @include mixins.animation(waveY-20 8000ms linear 0ms infinite);
+    @include mixins.mq-down(sm) {
+      width: 120px;
+      top: 0;
+      right: 0;
+    }
+    .img-box {
+      padding-top: 100%;
+    }
+  }
+}
+
+// 一覧
+.lower-information_l {
+  .info {
+    padding-top: 80px;
+
+    &__main {
+      .category-holder {
+        dl {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+        .txt-category {
+          font-size: 1.8rem;
+          color: variables.$primary-color;
+          font-weight: bold;
+        }
+        .category-desc {
+          font-size: 1.6rem;
+          margin-left: 32px;
+          position: relative;
+
+          &:before {
+            content: '';
+            display: inline-block;
+            width: 1px;
+            height: 16px;
+            background-color: #97999c;
+            position: absolute;
+            top: 50%;
+            left: -16px;
+            transform: translateY(-50%);
+          }
+        }
+      }
+      .list-holder {
+        margin-top: 24px;
+      }
+      .btn-box {
+        width: 240px;
+        height: 64px;
+        margin: 56px auto 0;
+      }
+      .pagination {
+        margin-top: 36px;
+
+        ul {
+          justify-content: center;
+
+          li {
+            margin: 0;
+
+            &.arrow {
+              &.prev {
+                margin-right: 0;
+
+                a {
+                  border-radius: 5px 0 0 5px;
+                }
+              }
+              &.next {
+                a {
+                  border-radius: 0 5px 5px 0;
+                }
+              }
+
+              a {
+                background-color: #ddf0f8;
+                color: variables.$primary-color;
+
+                @include mixins.mq-up(md) {
+                  &:hover {
+                    background-color: variables.$primary-color;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+            &.number {
+              a {
+                color: #5c5c5c;
+                border: none;
+                background-color: #ddf0f8;
+                border-radius: 0;
+
+                @include mixins.mq-up(md) {
+                  &:hover {
+                    color: #fff;
+                    background-color: variables.$primary-color;
+                  }
+                }
+              }
+
+              em {
+                background-color: variables.$primary-color;
+              }
+            }
+
+            em {
+              border-radius: 0;
+              font-size: 1.5rem;
+              width: 48px;
+              height: 48px;
+            }
+            a {
+              font-size: 1.5rem;
+              width: 48px;
+              height: 48px;
+            }
+          }
+        }
+      }
+    }
+    &__list {
+      background-color: #fff;
+      box-shadow: 0 16px 24px rgba(variables.$primary-dark, 0.1);
+      border-radius: 10px;
+
+      &__item {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 40px 64px 32px 40px;
+
+        &:last-child {
+          border: none;
+        }
+        .info {
+          &__date {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            margin-right: 20px;
+            margin-left: 4px;
+            @include mixins.mq-down(md) {
+              margin-top: 2px;
+              margin-right: 12px;
+            }
+            .txt {
+              color: variables.$primary-light;
+              font-size: 1.5rem;
+              font-weight: 600;
+              @include mixins.mq-down(sm) {
+                font-size: 1.4rem;
+              }
+            }
+            &:before {
+              content: '';
+              display: block;
+              width: 16px;
+              height: 16px;
+              margin-top: 6px;
+              background: url('../img/common/i_calendar.svg')
+                no-repeat center / cover;
+              margin-right: 8px;
+              @include mixins.mq-down(sm) {
+                width: 14px;
+                height: 14px;
+              }
+            }
+          }
+          &__tags {
+            display: flex;
+            flex-wrap: wrap;
+            &__item {
+              margin-top: 2px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 24px;
+              background: variables.$third-color;
+              padding: 2px 4px 0;
+              border-radius: 2px;
+              &:not(:last-child) {
+                margin-right: 4px;
+              }
+              @include mixins.mq-down(md) {
+                margin-top: 4px;
+              }
+              .txt {
+                display: block;
+                font-size: 1.2rem;
+                font-weight: 600;
+                line-height: 1.4;
+              }
+            }
+          }
+          &__ttl {
+            width: 100%;
+            margin-top: 8px;
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1.6;
+            transition: color 400ms variables.$bezier-easeOutCubic
+              0ms;
+            @include mixins.mq-down(md) {
+              font-size: 1.7rem;
+            }
+          }
+          &__desc {
+            width: 100%;
+            margin-top: 12px;
+          }
+        }
+        .link {
+          color: variables.$primary-color;
+          font-weight: bold;
+          transition: color 0.3s;
+          @include mixins.mq-up(md) {
+            &:hover {
+              color: variables.$primary-dark;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 詳細
+.lower-information_d {
+
+}

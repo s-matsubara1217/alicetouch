@@ -23,9 +23,9 @@
             speed = 400;
 
         $acodionTrigger.on('click' , function(){
-            
+
             $(this).next().slideToggle('fast').end().children($apealTriggerIco).toggleClass('js-active');
-            
+
 //            var scrollAddPosition = 50,
 //                n = window.location.href.slice(window.location.href.indexOf('?') + 4),
 //                p = $(this).parent().offset().top;
@@ -72,9 +72,9 @@
 
     // ★text overflow toggle
     var overFlowText = function() {
-        
+
         $('.job_post_slidedown').each(function() {
-            
+
             var $textSlideDown = $(this),
                 $slideDownText = $textSlideDown.find('.job_lead'),
                 $slideDownTextHeight =$slideDownText.height(),
@@ -82,18 +82,18 @@
                 maxHeight = ['70px' , '5000px'],
                 speed = 400,
                 insertHtml = '<div class="more_link_inner"><a class="more_link is_sp">もっと見る</a></div>';
-            
+
             if($slideDownTextHeight > textHeight) {
-                
+
                 $slideDownText.css({ 'max-height' : maxHeight[0] });
-                
+
                 $textSlideDown.append(insertHtml);
-                
+
                 var $more_btn = $textSlideDown.find('.more_link');
-                
+
                 $more_btn.on('click', function(){
                     $(this).toggleClass('js-active').parent().prev().toggleClass('js-active');
-                    
+
                     if($more_btn.hasClass('js-active')){
                         $slideDownText.css({ 'max-height' : maxHeight[1] });
                         $more_btn.text('閉じる');
@@ -101,20 +101,20 @@
                         $slideDownText.css({ 'max-height' : maxHeight[0] });
                         $more_btn.text('もっと見る');
                     }
-                    
+
 //                    var scrollAddPosition = 50,
 //                        n = window.location.href.slice(window.location.href.indexOf('?') + 4),
 //                        p = $textSlideDown.parent().offset().top;
-//                    
+//
 //                    $('html,body').animate({
 //                        scrollTop: p
 //                    }, speed );
 //                    return false;
                 });
             }
-            
+
         });
-        
+
     }
 //    overFlowText();
 
@@ -123,7 +123,7 @@
         overFlowSlide();
     });
     var overFlowSlide = function() {
-        
+
         var windowWidth = $(window).width(),
             bp = 480;
 
@@ -138,33 +138,48 @@
             $('.job_lead').css({ 'max-height' : 'none' });
             $('.more_link_inner').remove();
         }
-        
+
     }
+
 
 
     // ★求人条件検索
     var searchPanelToggle = function() {
-        
+
         $('.search_panel').each(function (event) {
-            
-            var $searchPanel = $(this),
-                $toggleArea = $('.search-toggle'),
-                $toggleIco = $('.toggle_trigger'),
-                $formMenu = $('.search_body'),
-                speed = 400;
+
+            let $searchPanel = $(this);
+            let $toggleArea = $('.search-toggle');
+            let $toggleIco = $('.toggle_trigger');
+            let $formMenu = $('.search_body');
+            let speed = 400;
+            const mql = window.matchMedia('screen and (max-width: 834px)');
+            let flag = '';
 
             $toggleArea.on('click', function(){
                 $toggleArea.toggleClass('js-active');
-                if($toggleArea.hasClass('js-active')){
-                    $formMenu.slideDown(speed);
-                }else{
-                    $formMenu.slideUp(speed);
-                }
+                $formMenu.slideToggle(speed);
             });
-            // default open
-//            $toggleArea.trigger('click');
+
+            function checkBreakPoint(mql) {
+                if (mql.matches) {
+                    $toggleArea.removeClass('js-active'),
+                    $formMenu.slideUp(speed);
+                } else {
+                    // default open
+                    $toggleArea.addClass('js-active'),
+                    $formMenu.slideDown(speed);
+                }
+            }
+
+            // ブレイクポイントの瞬間に発火
+            mql.addListener(checkBreakPoint);
+
+            // 初回チェック
+            checkBreakPoint(mql);
+
         });
-        
+
     }
     searchPanelToggle();
 
