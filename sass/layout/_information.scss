@@ -455,6 +455,398 @@
 
 // 詳細
 .lower-information_d {
+  .l-main {
+    &__mv {
+      padding-top: 284px;
+      @include mixins.mq-down(xxl) {
+        padding-top: 244px;
+      }
+      @include mixins.mq-down(md) {
+        padding-top: 200px;
+      }
+      @include mixins.mq-down(sm) {
+        padding-top: 167px;
+      }
+    }
+  }
+  .info {
+    &__main {
+      &__inner {
+        background-color: #fff;
+        box-shadow: 0 16px 24px rgb(33 108 196 / 10%);
+        padding: 40px 48px 56px 40px;
+        border-radius: 10px;
+        margin-top: -160px;
+        position: relative;
+        z-index: 10;
+        @include mixins.mq-down(md) {
+          margin-top: -90px;
+          padding: 24px;
+          padding-bottom: 32px;
+        }
+      }
 
+      .head {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        position: relative;
+        padding-bottom: 24px;
+        @include mixins.mq-down(md) {
+          padding-bottom: 16px;
+        }
+
+        &:before {
+          content: "";
+          height: 1px;
+          width: 100%;
+          display: inline-block;
+          background-image: linear-gradient(to right, #adadad, #adadad 4px, transparent 4px, transparent 6px);
+          background-size: 6px 1px;
+          background-repeat: repeat-x;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+        .info {
+          &__date {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            margin-right: 20px;
+            margin-left: 4px;
+            @include mixins.mq-down(md) {
+              margin-top: 2px;
+              margin-right: 12px;
+            }
+            .txt {
+              color: variables.$primary-light;
+              font-size: 1.5rem;
+              font-weight: 600;
+              @include mixins.mq-down(sm) {
+                font-size: 1.4rem;
+              }
+            }
+            &:before {
+              content: '';
+              display: block;
+              width: 16px;
+              height: 16px;
+              margin-top: 6px;
+              background: url('../img/common/i_calendar.svg')
+                no-repeat center / cover;
+              margin-right: 8px;
+              @include mixins.mq-down(sm) {
+                width: 14px;
+                height: 14px;
+              }
+            }
+          }
+          &__tags {
+            display: flex;
+            flex-wrap: wrap;
+            &__item {
+              margin-top: 2px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 24px;
+              background: variables.$third-color;
+              padding: 2px 4px 0;
+              border-radius: 2px;
+              &:not(:last-child) {
+                margin-right: 4px;
+              }
+              @include mixins.mq-down(md) {
+                margin-top: 4px;
+              }
+              .txt {
+                display: block;
+                font-size: 1.2rem;
+                font-weight: 600;
+                line-height: 1.4;
+              }
+            }
+          }
+          &__ttl {
+            width: 100%;
+            margin-top: 8px;
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1.6;
+            transition: color 400ms variables.$bezier-easeOutCubic
+              0ms;
+            @include mixins.mq-down(md) {
+              font-size: 1.7rem;
+            }
+
+            .ttl {
+              transition: color 0.3s;
+              @include mixins.mq-up(md) {
+                &:hover {
+                  color: variables.$primary-dark;
+                }
+              }
+            }
+          }
+        }
+      }
+      .body {
+        .txt-holder {
+          margin-top: 32px;
+          @include mixins.mq-down(md) {
+            margin-top: 20px;
+          }
+          .txt {
+            font-weight: 500;
+          }
+        }
+        .img-holder {
+          margin-top: 32px;
+          position: relative;
+          @include mixins.mq-down(md) {
+            margin-top: 20px;
+          }
+          .img {
+            @include mixins.keepAspect(68.3%);
+            max-width: 600px;
+            margin: 0 auto;
+
+            img {
+              border-radius: 10px;
+            }
+          }
+          .circle {
+            position: absolute;
+            z-index: 2;
+            opacity: 0;
+
+            &-01 {
+              width: 51px;
+              height: 51px;
+              top: 72px;
+              left: 1.2%;
+              @include mixins.mq-down(md) {
+                width: 40px;
+                height: 40px;
+                top: 18px;
+                left: -6%;
+              }
+
+              &.js-active {
+                @include mixins.animation(
+                  fadein-b-40 600ms variables.$bezier-easeOutSine 400ms
+                );
+              }
+            }
+            &-02 {
+              width: 51px;
+              height: 51px;
+              top: 80px;
+              right: 1.2%;
+              @include mixins.mq-down(md) {
+                width: 40px;
+                height: 40px;
+                top: 32px;
+                right: -6%;
+              }
+
+              &.js-active {
+                @include mixins.animation(
+                  fadein-b-40 600ms variables.$bezier-easeOutSine 600ms
+                );
+              }
+            }
+            &-03 {
+              width: 113px;
+              height: 113px;
+              bottom: 60px;
+              left: 5.8%;
+              @include mixins.mq-down(md) {
+                width: 80px;
+                height: 80px;
+                bottom: 8px;
+                left: -6%;
+              }
+
+              &.js-active {
+                @include mixins.animation(
+                  fadein-b-40 600ms variables.$bezier-easeOutSine 600ms
+                );
+              }
+            }
+            &-04 {
+              width: 29px;
+              height: 29px;
+              bottom: 120px;
+              right: 8.5%;
+              @include mixins.mq-down(md) {
+                bottom: 32px;
+                right: -6%;
+              }
+
+
+              &.js-active {
+                @include mixins.animation(
+                  fadein-b-40 600ms variables.$bezier-easeOutSine 400ms
+                );
+              }
+            }
+          }
+        }
+        .link-holder {
+          margin-top: 16px;
+          @include mixins.mq-down(md) {
+            margin-top: 12px;
+          }
+          .link {
+            color: variables.$primary-color;
+            border-bottom: 1px solid variables.$primary-color;
+            padding: 0 28px 4px 4px;
+            position: relative;
+            transition: color 0.3s;
+
+            @include mixins.mq-up(md) {
+              &:hover {
+                color: variables.$primary-dark;
+              }
+            }
+
+            &.-internal {
+              &:before {
+                content: '';
+                display: inline-block;
+                background-image: url(../img/common/ico_arrow_blue.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 13px;
+                height: 13px;
+                position: absolute;
+                top: 50%;
+                right: 6px;
+                transform: translateY(-50%);
+              }
+            }
+            &.-external {
+              &:before {
+                content: '';
+                display: inline-block;
+                background-image: url(../img/common/ico_external_blue.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 16px;
+                height: 11px;
+                position: absolute;
+                top: 50%;
+                right: 6px;
+                transform: translateY(-50%);
+              }
+            }
+          }
+        }
+      }
+    }
+    &__sub {
+      @include mixins.mq-down(md) {
+        margin-top: 90px;
+      }
+    }
+    .pagination {
+      max-width: 390px;
+      margin: 60px auto 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+      @include mixins.mq-down(md) {
+        margin-top: 44px;
+      }
+
+      .page-link {
+        background-color: #ddf0f8;
+        color: #5c5c5c;
+        width: 33%;
+        text-align: center;
+        padding: 8px 0;
+        position: absolute;
+        top: 0;
+        transition: all 0.3s;
+        @include mixins.mq-down(md) {
+          font-size: 1.4rem;
+        }
+
+        @include mixins.mq-up(md) {
+          &:hover {
+            color: #fff;
+            background-color: variables.$primary-color;
+
+            &.-prev,
+            &.-next {
+              &:before {
+                color: #fff;
+              }
+            }
+          }
+        }
+
+        &.-prev {
+          border-radius: 5px 0 0 5px;
+          left: 0;
+
+          &:before {
+            content: '<';
+            display: inline-block;
+            color: variables.$primary-color;
+            position: absolute;
+            top: 50%;
+            left: 14px;
+            transform: translateY(-50%);
+            transition: color 0.3s;
+            @include mixins.mq-down(md) {
+              left: 8px;
+            }
+          }
+        }
+        &.-next {
+          border-radius: 0 5px 5px 0;
+          right: 0;
+          &:before {
+            content: '>';
+            display: inline-block;
+            color: variables.$primary-color;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            transition: color 0.3s;
+            @include mixins.mq-down(md) {
+              right: 8px;
+            }
+          }
+        }
+      }
+      .page-back {
+        background-color: variables.$primary-color;
+        color: #fff;
+        width: 34%;
+        text-align: center;
+        padding: 8px 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 0.3s;
+        @include mixins.mq-down(md) {
+          font-size: 1.4rem;
+        }
+
+        @include mixins.mq-up(md) {
+          &:hover {
+            background-color: variables.$primary-dark;
+          }
+        }
+      }
+    }
+  }
 
 }

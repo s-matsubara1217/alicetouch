@@ -309,56 +309,7 @@
                 </div>
               </div>
             </div>
-            <div class="info__sub">
-              <div class="block -search anime -slideIn-b-40">
-                <div class="head">SEARCH</div>
-                <div class="body">
-                  <div class="search-box">
-                    <div class="search__word">
-                      <input class="search__field" type="search" name="FTS" placeholder="">
-                    </div>
-                    <div class="search__btn">
-                      <span class="submit-btn-holder">
-                        <input type="submit" class="submit-btn" value="">
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="block anime -slideIn-b-40">
-                <div class="head">CATEGORY</div>
-                <div class="body">
-                  <ul class="list">
-                    <li class="list__item">
-                      <a href="#">すべて</a>
-                    </li>
-                    <li class="list__item">
-                      <a href="#">お知らせ</a>
-                    </li>
-                    <li class="list__item">
-                      <a href="#">ブログ</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="block anime -slideIn-b-40">
-                <div class="head">ARCHIVE</div>
-                <div class="body">
-                  <ul class="list">
-                    <li class="list__item">
-                      <a href="#">2022年1月</a>
-                    </li>
-                    <li class="list__item">
-                      <a href="#">2022年2月</a>
-                    </li>
-                    <li class="list__item">
-                      <a href="#">2022年3月</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-            </div>
+				    <!-- info__sub ajax -->
           </div>
         </div>
 
@@ -536,5 +487,23 @@
     <!-- プラグイン -->
     <!-- 固有 -->
     <script src="js/script.js"></script>
+    <!-- info__sub ajax -->
+    <script>
+      jQuery(function () {
+        jQuery.ajax({
+          type: 'GET',
+          url: 'navigation_information_ajax.htm?time=' + new Date().getTime(),
+          success: function (data) {
+            $target = $('.info__main');
+            $target.after(data);
+            // js発火
+            objectFitImages('img.ofi');
+            spanWrap('.split');
+            scrollAnime();
+            loadActive();
+          },
+        });
+      });
+    </script>
   </body>
 </html>
