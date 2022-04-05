@@ -1,0 +1,119 @@
+// Foundation
+@use '../foundation/variables';
+@use '../foundation/mixins';
+
+/* ============================================
+// 事業所案内
+// ==========================================*/
+
+// 一覧
+.lower-facility_l {
+  .facility {
+    padding-top: 80px;
+    padding-bottom: 120px;
+
+    &__list {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      &__item {
+        width: 30%;
+        margin-right: 5%;
+        position: relative;
+        
+
+        &:nth-child(3n+3) {
+          margin-right: 0;
+        }
+
+        .link {
+          display: block;
+          transition: transform 400ms variables.$bezier-easeOutCubic
+            0ms;
+          @include mixins.mq-up(md) {
+            &:hover {
+              transform: translateY(-8px);
+              .link__wrap {
+                box-shadow: 0 16px 24px
+                  rgba(variables.$primary-dark, 0.1);
+              }
+            }
+          }
+
+          &__wrap {
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 10px 24px rgba(variables.$primary-dark, 0.1);
+            overflow: hidden;
+            transition: box-shadow 400ms
+              variables.$bezier-easeOutCubic 0ms;
+          }
+        }
+        .num {
+          font-size: 2.4rem;
+          font-weight: bold;
+          color: #fff;
+          background-color: variables.$primary-dark;
+          width: 55px;
+          height: 55px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          z-index: 2;
+        }
+        .img-holder {
+          transition: transform 400ms
+            variables.$bezier-easeOutCubic 0ms;
+          .img {
+            @include mixins.keepAspect(70.5%);
+
+            img {
+              border-radius: 10px 10px 0 0;
+            }
+          }
+        }
+        .txt-holder {
+          background-color: #fff;
+          border-radius: 0 0 10px 10px;
+          text-align: center;
+          padding: 18px;
+
+          .lead {
+
+          }
+          .name {
+            font-size: 2.6rem;
+            color: variables.$primary-color;
+            margin-top: 8px;
+            position: relative;
+            &::before {
+              content: '';
+              display: inline-block;
+              background-image: url(../img/common/ico_arrow.png);
+              background-size: contain;
+              background-repeat: no-repeat;
+              width: 18px;
+              height: 18px;
+              position: absolute;
+              top: 50%;
+              right: 0;
+              transform: translateY(-50%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 詳細
+.lower-facility_d {
+
+}
