@@ -7438,11 +7438,6 @@ a {
   right: 6px;
   transform: translateY(-50%);
 }
-@media screen and (max-width: 768px) {
-  .lower-information_d .info__sub {
-    margin-top: 90px;
-  }
-}
 .lower-information_d .info .pagination {
   max-width: 390px;
   margin: 60px auto 0;
@@ -7450,6 +7445,7 @@ a {
   justify-content: flex-start;
   align-items: flex-start;
   position: relative;
+  height: 44px;
 }
 @media screen and (max-width: 768px) {
   .lower-information_d .info .pagination {

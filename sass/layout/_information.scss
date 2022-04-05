@@ -746,11 +746,6 @@
         }
       }
     }
-    &__sub {
-      @include mixins.mq-down(md) {
-        margin-top: 90px;
-      }
-    }
     .pagination {
       max-width: 390px;
       margin: 60px auto 0;
@@ -758,6 +753,7 @@
       justify-content: flex-start;
       align-items: flex-start;
       position: relative;
+      height: 44px;
       @include mixins.mq-down(md) {
         margin-top: 44px;
       }
