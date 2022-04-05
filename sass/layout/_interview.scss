@@ -647,6 +647,8 @@
 
       .sec__interview {
         .head {
+          position: relative;
+          z-index: 10;
           .sec-ttl01 {
             .en {
               span {
@@ -1033,6 +1035,14 @@
             @include mixins.mq-down(md) {
               padding: 24px 80px 24px 1000px;
               margin-left: -990px;
+            }
+
+            .sec-ttl01 {
+              .en {
+                &:before {
+                  content: none;
+                }
+              }
             }
           }
           .body {

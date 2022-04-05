@@ -15,17 +15,36 @@
       justify-content: flex-start;
       align-items: flex-start;
       position: relative;
+
+      @include mixins.mq-down(md) {
+        display: block;
+      }
     }
     &__main {
       flex: 0 0 79%;
       max-width: 950px;
       margin-right: 4%;
+      @media screen and (min-width:768px) and (max-width:1024px) {
+        flex: 0 0 75%;
+      }
+      @include mixins.mq-down(md) {
+        margin-right: 0;
+      }
     }
     &__sub {
       flex: 0 0 17%;
       max-width: 200px;
       position: relative;
       z-index: 2;
+      @media screen and (min-width:768px) and (max-width:1024px) {
+        flex: 0 0 21%;
+      }
+
+      @include mixins.mq-down(md) {
+        width: 90%;
+        max-width: 300px;
+        margin: 48px auto 0;
+      }
 
       .block {
         margin-top: 28px;
@@ -101,17 +120,18 @@
 
               .search {
                 &__word {
-                  flex: 0 0 76.5%;
-                  max-width: 153px;
+                  flex: 1 1 auto;
 
-                  input {
-                    background-color: #ddf0f8;
-                    border: 1px solid variables.$primary-color;
+                  .search__field{
+
+                    background-color: #ddf0f8 !important;
+                    border: 1px solid variables.$primary-color !important;
+                    -webkit-appearance: none;
                   }
+
                 }
                 &__btn {
                   flex: 0 0 47px;
-                  max-width: 47px;
 
                   .submit-btn-holder {
                     display: block;
@@ -142,6 +162,11 @@
                   input {
                     background-color:  variables.$primary-color;
                     border: 1px solid variables.$primary-color;
+
+                    @-moz-document url-prefix() {
+                      width: 47px;
+                      height: 47px;
+                    }
                   }
                 }
               }
@@ -154,6 +179,9 @@
   }
   .l-main {
     padding-bottom: 108px;
+    @include mixins.mq-down(md) {
+      padding-bottom: 52px;
+    }
   }
   .bubble01 {
     width: 180px;
@@ -179,6 +207,9 @@
 .lower-information_l {
   .info {
     padding-top: 80px;
+    @include mixins.mq-down(md) {
+      padding-top: 40px;
+    }
 
     &__main {
       .category-holder {
@@ -196,6 +227,9 @@
           font-size: 1.6rem;
           margin-left: 32px;
           position: relative;
+          @include mixins.mq-down(md) {
+            margin-left: 28px;
+          }
 
           &:before {
             content: '';
@@ -207,6 +241,9 @@
             top: 50%;
             left: -16px;
             transform: translateY(-50%);
+            @include mixins.mq-down(md) {
+              left: -14px;
+            }
           }
         }
       }
@@ -217,9 +254,15 @@
         width: 240px;
         height: 64px;
         margin: 56px auto 0;
+        @include mixins.mq-down(md) {
+          margin-top: 40px;
+        }
       }
       .pagination {
         margin-top: 36px;
+        @include mixins.mq-down(md) {
+          margin-top: 32px;
+        }
 
         ul {
           justify-content: center;
@@ -299,6 +342,9 @@
         flex-wrap: wrap;
         border-bottom: 1px solid #e5e5e5;
         padding: 40px 64px 32px 40px;
+        @include mixins.mq-down(md) {
+          padding: 24px;
+        }
 
         &:last-child {
           border: none;
@@ -374,10 +420,22 @@
             @include mixins.mq-down(md) {
               font-size: 1.7rem;
             }
+
+            .ttl {
+              transition: color 0.3s;
+              @include mixins.mq-up(md) {
+                &:hover {
+                  color: variables.$primary-dark;
+                }
+              }
+            }
           }
           &__desc {
             width: 100%;
             margin-top: 12px;
+            @include mixins.mq-down(md) {
+              margin-top: 8px;
+            }
           }
         }
         .link {
@@ -397,5 +455,6 @@
 
 // 詳細
 .lower-information_d {
+
 
 }

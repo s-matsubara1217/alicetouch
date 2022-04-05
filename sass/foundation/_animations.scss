@@ -316,3 +316,13 @@
     transform: translateY(0);
   }
 }
+@include mixins.keyframes(fadein-b-rotateX-reverse) {
+  0% {
+    opacity: 0;
+    transform: translateY(10%) rotateX(90deg) scale(-1,1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0) scale(-1,1);
+  }
+}

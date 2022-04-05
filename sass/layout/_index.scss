@@ -724,6 +724,23 @@
                   );
                 }
               }
+              .sec-ttl01 {
+                @include mixins.mq-down(md) {
+                  .en {
+                    &:before {
+                      left: auto;
+                      right: -28px;
+                    }
+                    &.js-active {
+                      &:before {
+                        @include mixins.animation(
+                          fadein-b-rotateX-reverse 300ms variables.$bezier-easeOutSine 650ms
+                        );
+                      }
+                    }
+                  }
+                }
+              }
               .btn-box {
                 width: 240px;
                 height: 64px;
@@ -938,6 +955,8 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
+            z-index: 10;
             @include mixins.mq-down(md) {
               max-width: 420px;
             }

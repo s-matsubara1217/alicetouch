@@ -16,6 +16,37 @@
     color: #fff;
     text-transform: uppercase;
     line-height: 1;
+    position: relative;
+
+
+    &:before {
+      content: '';
+      display: inline-block;
+      background-image: url(../img/common/ttl_shape.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 56px;
+      height: 37px;
+      position: absolute;
+      top: -32px;
+      left: -36px;
+      opacity: 0;
+      @include mixins.mq-down(md) {
+        width: 39px;
+        height: 26px;
+        top: -22px;
+        left: -28px;
+      }
+    }
+    &.js-active {
+      &:before {
+        @include mixins.animation(
+          fadein-b-rotateX 300ms variables.$bezier-easeOutSine 450ms
+        );
+      }
+    }
+
+
     @include mixins.mq-down(md) {
       font-size: 3.6rem;
     }
