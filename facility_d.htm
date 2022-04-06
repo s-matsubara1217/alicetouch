@@ -221,15 +221,15 @@
                 <img class="ofi" src="img/common/i_bubble.png" alt="装飾">
               </span>
             </div>
-            <div class="facility__head">
-              <div class="txt-holder">
-                <p class="lead">「出会いをつなげて」-ごきげんな毎日を
+            <div class="facility__head anime -slideIn-b-40">
+              <div class="txt-holder" id="js-benchMark01">
+                <p class="lead" id="js-destination01">「出会いをつなげて」-ごきげんな毎日を
                   過ごす-</p>
                   <p class="desc">
                     障がい者スポーツセンターでお手伝いを始めた知的障がい者（児）や視覚障がい者、身体障がい者のプール教室、シンクロ教室、親子水泳。それが、体育大学水泳部出身の代表が今まで知らなかった水泳の新たな世界に触れるきっかけになったのです。「できなかった」ことが「できる」ようになる喜びは、本人はもちろん保護者、周りの人達、指導してきた人など関わってきたすべての人の喜びになることを知りました。「できる」ようになるには本人だけの問題ではなく、周りの人が環境を整えることが非常に重要です。
                   </p>
               </div>
-              <div class="img-holder">
+              <div class="img-holder" id="js-target01">
                 <div class="img">
                   <img src="img/facility/input/facility_a_02.jpg" alt="イメージ" class="ofi" loading="lazy">
                 </div>
@@ -246,9 +246,9 @@
                       <h2 class="ja split anime -for-boundIn-b-40">支援内容</h2>
                     </div>
                   </div>
-                  <div class="support__body">
+                  <div class="support__body anime -slideIn-b-40">
                     <ul class="support__list">
-                      <li class="support__list__item">
+                      <li class="support__list__item anime">
                         <div class="term-holder">
                           <span class="num">1</span>
                           <p class="term">居宅介護　障がい者支援</p>
@@ -259,7 +259,7 @@
                           </p>
                         </div>
                       </li>
-                      <li class="support__list__item">
+                      <li class="support__list__item anime">
                         <div class="term-holder">
                           <span class="num">2</span>
                           <p class="term">重度訪問介護　障がい者支援</p>
@@ -270,7 +270,7 @@
                           </p>
                         </div>
                       </li>
-                      <li class="support__list__item">
+                      <li class="support__list__item anime">
                         <div class="term-holder">
                           <span class="num">3</span>
                           <p class="term">行動援護　障がい者支援</p>
@@ -281,7 +281,7 @@
                           </p>
                         </div>
                       </li>
-                      <li class="support__list__item">
+                      <li class="support__list__item anime">
                         <div class="term-holder">
                           <span class="num">4</span>
                           <p class="term">同行援護　障がい者支援</p>
@@ -292,7 +292,7 @@
                           </p>
                         </div>
                       </li>
-                      <li class="support__list__item">
+                      <li class="support__list__item anime">
                         <div class="term-holder">
                           <span class="num">5</span>
                           <p class="term">大阪市移動支援　障がい者支援</p>
@@ -303,7 +303,7 @@
                           </p>
                         </div>
                       </li>
-                      <li class="support__list__item">
+                      <li class="support__list__item anime">
                         <div class="term-holder">
                           <span class="num">6</span>
                           <p class="term">訪問介護</p>
@@ -314,7 +314,7 @@
                           </p>
                         </div>
                       </li>
-                      <li class="support__list__item">
+                      <li class="support__list__item anime">
                         <div class="term-holder">
                           <span class="num">7</span>
                           <p class="term">放課後等デイサービス　児童発達支援</p>
@@ -325,7 +325,7 @@
                           </p>
                         </div>
                       </li>
-                      <li class="support__list__item">
+                      <li class="support__list__item anime">
                         <div class="term-holder">
                           <span class="num">8</span>
                           <p class="term">生活介護</p>
@@ -351,7 +351,7 @@
                     </div>
                   </div>
                   <div class="outline__body">
-                    <div class="list-holder">
+                    <div class="list-holder anime -slideIn-b-40">
                       <dl class="list">
                         <dt class="term">従業員数</dt>
                         <dd class="description">サービス提供責任者8名　登録ヘルパー46名（平成31年3月現在）</dd>
@@ -376,7 +376,7 @@
                         <dd class="description">TEL：06-6764-7267</dd>
                       </dl>
                     </div>
-                    <div class="map-holder">
+                    <div class="map-holder anime -slideIn-b-40">
                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.2876487255255!2d135.51792792920668!3d34.67614849877754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e736516a7e85%3A0xba2acfaeffd11d7b!2z44Ki44Oq44K544K_44OD44OB77yI5ZCI5ZCM5Lya56S-77yJ!5e0!3m2!1sja!2sjp!4v1649211607106!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                   </div>
@@ -570,23 +570,7 @@
     <!-- プラグイン -->
     <!-- 固有 -->
     <script src="js/script.js"></script>
-    <!-- info__sub ajax -->
-    <script>
-      jQuery(function () {
-        jQuery.ajax({
-          type: 'GET',
-          url: 'navigation_information_ajax.htm?time=' + new Date().getTime(),
-          success: function (data) {
-            $target = $('.info__main');
-            $target.after(data);
-            // js発火
-            objectFitImages('img.ofi');
-            spanWrap('.split');
-            scrollAnime();
-            loadActive();
-          },
-        });
-      });
-    </script>
+    <script src="js/facility.js"></script>
+
   </body>
 </html>

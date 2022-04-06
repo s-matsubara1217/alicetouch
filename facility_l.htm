@@ -457,23 +457,5 @@
     <!-- プラグイン -->
     <!-- 固有 -->
     <script src="js/script.js"></script>
-    <!-- info__sub ajax -->
-    <script>
-      jQuery(function () {
-        jQuery.ajax({
-          type: 'GET',
-          url: 'navigation_information_ajax.htm?time=' + new Date().getTime(),
-          success: function (data) {
-            $target = $('.info__main');
-            $target.after(data);
-            // js発火
-            objectFitImages('img.ofi');
-            spanWrap('.split');
-            scrollAnime();
-            loadActive();
-          },
-        });
-      });
-    </script>
   </body>
 </html>
