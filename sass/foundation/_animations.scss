@@ -62,7 +62,7 @@
       opacity: 0;
     }
     &.js-active {
-      @for $i from 1 through 20 {
+      @for $i from 1 through 30 {
         span:nth-child(#{$i}) {
           @include mixins.animation(
             fadein-b-40 600ms variables.$bezier-easeOutBack ($i * 35ms)
@@ -70,7 +70,7 @@
         }
       }
       &.-delay {
-        @for $i from 1 through 20 {
+        @for $i from 1 through 30 {
           span:nth-child(#{$i}) {
             @include mixins.animation(
               fadein-b-40 600ms variables.$bezier-easeOutBack
@@ -87,7 +87,7 @@
       opacity: 0;
     }
     &.js-active {
-      @for $i from 1 through 20 {
+      @for $i from 1 through 30 {
         span:nth-child(#{$i}) {
           @include mixins.animation(
             fadein-r-40 600ms variables.$bezier-easeOutSine ($i * 35ms)
@@ -95,7 +95,7 @@
         }
       }
       &.-delay {
-        @for $i from 1 through 20 {
+        @for $i from 1 through 30 {
           span:nth-child(#{$i}) {
             @include mixins.animation(
               fadein-r-40 600ms variables.$bezier-easeOutSine

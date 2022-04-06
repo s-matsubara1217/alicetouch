@@ -93,4 +93,14 @@
       align-items: flex-start;
     }
   }
+  &.-firstLetterBlue {
+    .en {
+      span {
+        color: variables.$primary-color;
+        &:first-child {
+          color: variables.$primary-dark;
+        }
+      }
+    }
+  }
 }
