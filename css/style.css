@@ -8460,4 +8460,229 @@ a {
     margin-top: 40px;
   }
 }
+
+/* ============================================
+// 放課後等デイサービス
+// ==========================================*/
+.lower-daycare .daycare {
+  padding-top: 88px;
+}
+.lower-daycare .daycare .bubble01 {
+  width: 180px;
+  position: absolute;
+  z-index: 1;
+  top: -120px;
+  right: 156px;
+  opacity: 0.4;
+  pointer-events: none;
+  -webkit-animation: waveY-20 8000ms linear 0ms infinite;
+  animation: waveY-20 8000ms linear 0ms infinite;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@media screen and (max-width: 480px) {
+  .lower-daycare .daycare .bubble01 {
+    width: 120px;
+    top: -80px;
+    right: 0;
+  }
+}
+.lower-daycare .daycare .bubble01 .img-box {
+  padding-top: 100%;
+}
+.lower-daycare .daycare__inner {
+  position: relative;
+}
+.lower-daycare .daycare .sec__about .about__body {
+  position: relative;
+}
+.lower-daycare .daycare .sec__about .about__body .img-holder .img {
+  position: relative;
+  z-index: 1;
+  position: absolute;
+}
+.lower-daycare .daycare .sec__about .about__body .img-holder .img:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.lower-daycare .daycare .sec__about .about__body .img-holder .img img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.lower-daycare .daycare .sec__about .about__body .img-holder .img-01 {
+  width: 260px;
+  height: 260px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.lower-daycare .daycare .sec__about .about__body .img-holder .img-02 {
+  width: 214px;
+  height: 214px;
+  top: -120px;
+  right: 0;
+}
+.lower-daycare .daycare .sec__about .about__body .img-holder .img-03 {
+  width: 186px;
+  height: 186px;
+  bottom: -140px;
+  right: 90px;
+}
+.lower-daycare .daycare .sec__about .about__body .img-holder .img img {
+  border-radius: 50%;
+}
+.lower-daycare .daycare .sec__about .about__body .txt-holder {
+  max-width: 600px;
+  margin: 48px auto 0;
+}
+.lower-daycare .daycare .sec__feature {
+  margin-top: 190px;
+}
+.lower-daycare .daycare .sec__feature .feature__body {
+  margin-top: 44px;
+}
+.lower-daycare .daycare .sec__feature .feature__list__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px 0;
+  border-top: 3px solid #e4eff5;
+}
+.lower-daycare .daycare .sec__feature .feature__list__item:first-child {
+  padding-top: 0;
+  border: none;
+}
+.lower-daycare .daycare .sec__feature .feature__list__item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.lower-daycare .daycare .sec__feature .feature__list__item:nth-child(even) .img-holder {
+  margin-right: auto;
+  margin-left: 6.25%;
+}
+.lower-daycare .daycare .sec__feature .feature__list__item .img-holder {
+  flex: 0 0 33.3%;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-right: 6.25%;
+}
+.lower-daycare .daycare .sec__feature .feature__list__item .img-holder .img {
+  position: relative;
+  z-index: 1;
+}
+.lower-daycare .daycare .sec__feature .feature__list__item .img-holder .img:before {
+  content: "";
+  display: block;
+  padding-top: 73.25%;
+}
+.lower-daycare .daycare .sec__feature .feature__list__item .img-holder .img img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.lower-daycare .daycare .sec__feature .feature__list__item .img-holder .img img {
+  border-radius: 10px;
+}
+.lower-daycare .daycare .sec__feature .feature__list__item .txt-holder {
+  flex: 1 1 auto;
+}
+.lower-daycare .daycare .sec__feature .feature__list__item .txt-holder .term-holder {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.lower-daycare .daycare .sec__feature .feature__list__item .txt-holder .term-holder .num {
+  font-size: 2.4rem;
+  color: #fff;
+  background-color: #1c9dd2;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+.lower-daycare .daycare .sec__feature .feature__list__item .txt-holder .term-holder .term {
+  font-size: 2.4rem;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+.lower-daycare .daycare .sec__feature .feature__list__item .txt-holder .desc-holder {
+  margin-top: 16px;
+}
+.lower-daycare .daycare .sec__feature .feature__list__item .txt-holder .desc-holder .desc {
+  font-weight: 500;
+}
+.lower-daycare .daycare .sec__assessment {
+  margin-top: 90px;
+}
+.lower-daycare .daycare .sec__assessment .assessment__body {
+  margin-top: 48px;
+}
+.lower-daycare .daycare .sec__assessment .assessment__body__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 16px 24px rgba(33, 108, 196, 0.1);
+  padding: 56px 100px 80px;
+  border-radius: 10px;
+}
+.lower-daycare .daycare .sec__assessment .assessment__list {
+  margin-top: 32px;
+}
+.lower-daycare .daycare .sec__assessment .assessment__list:first-child {
+  margin-top: 0;
+}
+.lower-daycare .daycare .sec__assessment .assessment__list .term {
+  font-size: 2rem;
+  color: #1c9dd2;
+  border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+  padding: 8px 20px;
+  margin-bottom: 12px;
+}
+.lower-daycare .daycare .sec__assessment .assessment__list .desc {
+  font-weight: 500;
+  padding: 0 12px;
+}
+.lower-daycare .daycare .sec__outline {
+  margin-top: 108px;
+}
+.lower-daycare .daycare .sec__outline .outline__body {
+  margin-top: 40px;
+}
+.lower-daycare .daycare .sec__outline .outline__list__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.lower-daycare .daycare .sec__outline .outline__list__item .txt-holder {
+  flex: 0 0 47.5%;
+}
+.lower-daycare .daycare .sec__outline .outline__list__item .txt-holder .name__sub {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.lower-daycare .daycare .sec__outline .outline__list__item .txt-holder .name__main {
+  font-size: 2.8rem;
+  color: #216cc4;
+  line-height: 1.6;
+}
+.lower-daycare .daycare .sec__outline .outline__list__item .txt-holder .list-holder {
+  margin-top: 28px;
+}
+.lower-daycare .daycare .sec__outline .outline__list__item .txt-holder .list-holder .list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.lower-daycare .daycare .sec__outline .outline__list__item .map-holder {
+  flex: 0 0 52.5%;
+}
 /*# sourceMappingURL=style.css.map */
