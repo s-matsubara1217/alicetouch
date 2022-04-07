@@ -8466,6 +8466,7 @@ a {
 // ==========================================*/
 .lower-daycare .daycare {
   padding-top: 88px;
+  padding-bottom: 140px;
 }
 .lower-daycare .daycare .bubble01 {
   width: 180px;
@@ -8661,9 +8662,57 @@ a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-top: 56px;
+}
+.lower-daycare .daycare .sec__outline .outline__list__item:first-child {
+  margin-top: 0;
+}
+.lower-daycare .daycare .sec__outline .outline__list__item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.lower-daycare .daycare .sec__outline .outline__list__item:nth-child(even) .txt-holder {
+  padding-right: 0;
+  padding-left: 6%;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .lower-daycare .daycare .sec__outline .outline__list__item:nth-child(even) .txt-holder {
+    padding-left: 4%;
+  }
+}
+.lower-daycare .daycare .sec__outline .outline__list__item:nth-child(even) .txt-holder:before {
+  transform: translateX(0);
 }
 .lower-daycare .daycare .sec__outline .outline__list__item .txt-holder {
   flex: 0 0 47.5%;
+  padding-right: 6%;
+  position: relative;
+  z-index: 2;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .lower-daycare .daycare .sec__outline .outline__list__item .txt-holder {
+    padding-left: 4%;
+  }
+}
+.lower-daycare .daycare .sec__outline .outline__list__item .txt-holder:before {
+  content: "";
+  display: inline-block;
+  background-color: #dff1fa;
+  position: absolute;
+  top: -60px;
+  right: 0;
+  left: 0;
+  bottom: -72px;
+  width: 100vw;
+  transform: translateX(-50%);
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .lower-daycare .daycare .sec__outline .outline__list__item .txt-holder:before {
+    top: -28px;
+    bottom: -40px;
+  }
+}
+.lower-daycare .daycare .sec__outline .outline__list__item .txt-holder .name {
+  position: relative;
 }
 .lower-daycare .daycare .sec__outline .outline__list__item .txt-holder .name__sub {
   font-size: 1.4rem;
@@ -8675,14 +8724,69 @@ a {
   line-height: 1.6;
 }
 .lower-daycare .daycare .sec__outline .outline__list__item .txt-holder .list-holder {
-  margin-top: 28px;
+  position: relative;
+  margin-top: 20px;
 }
 .lower-daycare .daycare .sec__outline .outline__list__item .txt-holder .list-holder .list {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  border-bottom: 1px solid #b9d6ef;
+  padding: 4px 0;
+}
+.lower-daycare .daycare .sec__outline .outline__list__item .txt-holder .list-holder .list .term {
+  flex: 0 0 17%;
+  padding-right: 3%;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .lower-daycare .daycare .sec__outline .outline__list__item .txt-holder .list-holder .list .term {
+    flex: 0 0 20%;
+  }
+}
+.lower-daycare .daycare .sec__outline .outline__list__item .txt-holder .list-holder .list .desc {
+  flex: 0 0 80%;
+  font-weight: 500;
+}
+.lower-daycare .daycare .sec__outline .outline__list__item .txt-holder .list-holder .list .desc .gMap_link {
+  position: relative;
+  font-weight: bold;
+  color: #1c9dd2;
+}
+.lower-daycare .daycare .sec__outline .outline__list__item .txt-holder .list-holder .list .desc .gMap_link:before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 0.17em;
+  margin-right: 0.3em;
+  width: 0.77em;
+  height: 1em;
+  background: url("../img/kyujin/ico_custom_location_black.png") no-repeat center center/contain;
+}
+@media screen and (min-width: 769px) {
+  .lower-daycare .daycare .sec__outline .outline__list__item .txt-holder .list-holder .list .desc .gMap_link {
+    transition: color 300ms cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  .lower-daycare .daycare .sec__outline .outline__list__item .txt-holder .list-holder .list .desc .gMap_link:hover {
+    color: #167ba5;
+  }
+}
+.lower-daycare .daycare .sec__outline .outline__list__item .txt-holder .list-holder .list .desc .gMap_link:before {
+  background: url(../img/kyujin/ico_custom_location_color.png) no-repeat center center/contain;
 }
 .lower-daycare .daycare .sec__outline .outline__list__item .map-holder {
   flex: 0 0 52.5%;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 36.7%;
+  position: relative;
+  z-index: 5;
+}
+.lower-daycare .daycare .sec__outline .outline__list__item .map-holder iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,6 +9,7 @@
 .lower-daycare {
   .daycare {
     padding-top: 88px;
+    padding-bottom: 140px;
 
     .bubble01 {
       width: 180px;
@@ -221,11 +222,55 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            margin-top: 56px;
 
+            &:first-child {
+              margin-top: 0;
+            }
+            &:nth-child(even) {
+              flex-direction: row-reverse;
+
+              .txt-holder {
+                padding-right: 0;
+                padding-left: 6%;
+                @media screen and (min-width:768px) and (max-width:1024px) {
+                  padding-left: 4%;
+                }
+
+                &:before {
+                  transform: translateX(0);
+                }
+              }
+            }
 
             .txt-holder {
               flex: 0 0 47.5%;
+              padding-right: 6%;
+              position: relative;
+              z-index: 2;
+              @media screen and (min-width:768px) and (max-width:1024px) {
+                padding-left: 4%;
+              }
+
+              &:before {
+                content: '';
+                display: inline-block;
+                background-color: #dff1fa;
+                position: absolute;
+                top: -60px;
+                right: 0;
+                left: 0;
+                bottom: -72px;
+                width: 100vw;
+                transform: translateX(-50%);
+                @media screen and (min-width:768px) and (max-width:1024px) {
+                  top: -28px;
+                  bottom: -40px;
+                }
+              }
+
               .name {
+                position: relative;
                 &__sub {
                   font-size: 1.4rem;
                   font-weight: 500;
@@ -237,27 +282,70 @@
                 }
               }
               .list-holder {
-                margin-top: 28px;
+                position: relative;
+                margin-top: 20px;
 
                 .list {
                   display: flex;
                   justify-content: flex-start;
                   align-items: flex-start;
+                  border-bottom: 1px solid #b9d6ef;
+                  padding: 4px 0;
 
                   .term {
-
+                    flex: 0 0 17%;
+                    padding-right: 3%;
+                    @media screen and (min-width:768px) and (max-width:1024px) {
+                      flex: 0 0 20%;
+                    }
                   }
                   .desc {
-
+                    flex: 0 0 80%;
+                    font-weight: 500;
+                    .gMap_link {
+                      position: relative;
+                      font-weight: bold;
+                      &:before {
+                      content: "";
+                      display: inline-block;
+                          position: relative;
+                          top: 0.17em;
+                          margin-right: .3em;
+                      width: 0.77em;
+                      height: 1em;
+                      background: url("../img/kyujin/ico_custom_location_black.png") no-repeat center center / contain;
+                      }
+                      color: variables.$primary-color;
+                      @include mixins.mq-up(md) {
+                        transition: color 300ms variables.$bezier-easeOutCubic;
+                        &:hover {
+                          color: darken(variables.$primary-color, 10);
+                        }
+                      }
+                      &:before {
+                        background: url(../img/kyujin/ico_custom_location_color.png) no-repeat
+                          center center/contain;
+                      }
+                    }
                   }
                 }
               }
             }
             .map-holder {
               flex: 0 0 52.5%;
+              height: 0;
+              overflow: hidden;
+              padding-bottom: 36.7%;
+              position: relative;
+              z-index: 5;
 
               iframe {
-
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                border-radius: 10px;
               }
             }
           }
