@@ -10,6 +10,10 @@
   .daycare {
     padding-top: 88px;
     padding-bottom: 140px;
+    @include mixins.mq-down(md) {
+      padding-top: 56px;
+      padding-bottom: 56px;
+    }
 
     .bubble01 {
       width: 180px;
@@ -20,10 +24,13 @@
       opacity: 0.4;
       pointer-events: none;
       @include mixins.animation(waveY-20 8000ms linear 0ms infinite);
-      @include mixins.mq-down(sm) {
+      @include mixins.mq-down(md) {
         width: 120px;
         top: -80px;
         right: 0;
+      }
+      @include mixins.mq-down(sm) {
+        width: 80px;
       }
       .img-box {
         padding-top: 100%;
@@ -43,38 +50,129 @@
           position: relative;
 
           .img-holder {
+            @include mixins.mq-down(md) {
+              display: flex;
+              justify-content: flex-start;
+              align-items: flex-start;
+              margin-top: 28px;
+            }
             .img {
               @include mixins.keepAspect(100%);
               position: absolute;
+              opacity: 0;
+              @include mixins.mq-down(md) {
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-right: 5%;
+              }
 
               &-01 {
                 width: 260px;
                 height: 260px;
-                top: 50%;
+                top: calc(50% - 130px);
                 left: 0;
-                transform: translateY(-50%);
+
+                @media screen and (min-width:768px) and (max-width:1440px) {
+                  width: 200px;
+                  height: 200px;
+                  top: calc(50% - 100px);
+                  left: -16px;
+                }
+                @include mixins.mq-down(md) {
+                  width: 30%;
+                  top: auto;
+                  left: auto;
+                  height: auto;
+                }
+
+                &.js-active {
+                  @include mixins.animation(
+                    fadein-b-40 600ms variables.$bezier-easeOutSine 200ms
+                  );
+                }
               }
               &-02 {
                 width: 214px;
                 height: 214px;
                 top: -120px;
                 right: 0;
+
+                @media screen and (min-width:768px) and (max-width:1440px) {
+                  width: 180px;
+                  height: 180px;
+                  top: -90px;
+                  right: -8px;
+                }
+                @include mixins.mq-down(md) {
+                  width: 30%;
+                  top: auto;
+                  right: auto;
+                  height: auto;
+                }
+
+                &.js-active {
+                  @include mixins.animation(
+                    fadein-b-40 600ms variables.$bezier-easeOutSine 400ms
+                  );
+                }
               }
               &-03 {
                 width: 186px;
                 height: 186px;
                 bottom: -140px;
                 right: 90px;
+
+                @media screen and (min-width:768px) and (max-width:1440px) {
+                  width: 160px;
+                  height: 160px;
+
+                }
+                @include mixins.mq-down(md) {
+                  width: 30%;
+                  bottom: auto;
+                  right: auto;
+                  height: auto;
+                  margin-right: 0;
+                }
+
+                &.js-active {
+                  @include mixins.animation(
+                    fadein-b-40 600ms variables.$bezier-easeOutSine 600ms
+                  );
+                }
               }
 
               img {
                 border-radius: 50%;
               }
             }
+            .bubble02 {
+              width: 106px;
+              position: absolute;
+              z-index: 1;
+              top: 208px;
+              left: 200px;
+              opacity: 0.4;
+              pointer-events: none;
+              @include mixins.animation(waveY-20 8000ms linear 0ms infinite);
+              @include mixins.mq-down(md) {
+                display: none;
+              }
+              .img-box {
+                padding-top: 100%;
+              }
+            }
           }
           .txt-holder {
             max-width: 600px;
             margin: 48px auto 0;
+            position: relative;
+            z-index: 2;
+            @include mixins.mq-down(md) {
+              margin-top: 28px;
+            }
 
             .description {
 
@@ -85,6 +183,9 @@
     }
     .sec__feature {
       margin-top: 190px;
+      @include mixins.mq-down(md) {
+        margin-top: 72px;
+      }
 
       .feature {
         &__head {
@@ -92,6 +193,9 @@
         }
         &__body {
           margin-top: 44px;
+          @include mixins.mq-down(md) {
+            margin-top: 28px;
+          }
         }
 
         &__list {
@@ -101,6 +205,10 @@
             align-items: flex-start;
             padding: 40px 0;
             border-top: 3px solid #e4eff5;
+            @include mixins.mq-down(md) {
+              display: block;
+              padding: 24px 0;
+            }
 
             &:first-child {
               padding-top: 0;
@@ -112,6 +220,9 @@
               .img-holder {
                 margin-right: auto;
                 margin-left: 6.25%;
+                @include mixins.mq-down(md) {
+                  margin-left: 0;
+                }
               }
             }
 
@@ -120,6 +231,10 @@
               max-width: 400px;
               margin: 0 auto;
               margin-right: 6.25%;
+              @include mixins.mq-down(md) {
+                margin-right: 0;
+                margin-top: 16px;
+              }
 
               .img {
                 @include mixins.keepAspect(73.25%);
@@ -137,6 +252,7 @@
                 align-items: flex-start;
 
                 .num {
+                  flex: 0 0 55px;
                   font-size: 2.4rem;
                   color: #fff;
                   background-color: variables.$primary-color;
@@ -147,11 +263,22 @@
                   align-items: center;
                   border-radius: 50%;
                   margin-right: 16px;
+                  @include mixins.mq-down(md) {
+                    flex: 0 0 36px;
+                    width: 36px;
+                    height: 36px;
+                    font-size: 2rem;
+                    margin-right: 10px;
+                  }
                 }
                 .term {
                   font-size: 2.4rem;
                   line-height: 1.6;
                   margin-top: 10px;
+                  @include mixins.mq-down(md) {
+                    font-size: 1.8rem;
+                    margin-top: 4px;
+                  }
                 }
               }
               .desc-holder {
@@ -167,12 +294,19 @@
     }
     .sec__assessment {
       margin-top: 90px;
+      @include mixins.mq-down(md) {
+        margin-top: 48px;
+      }
+
       .assessment {
         &__head {
 
         }
         &__body {
           margin-top: 48px;
+          @include mixins.mq-down(md) {
+            margin-top: 32px;
+          }
 
           &__inner {
             max-width: 1100px;
@@ -181,11 +315,18 @@
             box-shadow: 0 16px 24px rgba(variables.$primary-dark, 0.1);
             padding: 56px 100px 80px;
             border-radius: 10px;
+
+            @include mixins.mq-down(md) {
+              padding: 32px 12px;
+            }
           }
         }
 
         &__list {
           margin-top: 32px;
+          @include mixins.mq-down(md) {
+            margin-top: 32px;
+          }
 
           &:first-child {
             margin-top: 0;
@@ -193,21 +334,78 @@
 
           .term {
             font-size: 2rem;
+            line-height: 1.6;
             color: variables.$primary-color;
             border-top: 1px solid #d3d3d3;
             border-bottom: 1px solid #d3d3d3;
             padding: 8px 20px;
             margin-bottom: 12px;
+            @include mixins.mq-down(md) {
+              font-size: 1.8rem;
+              padding: 10px 12px;
+            }
           }
           .desc {
             font-weight: 500;
-            padding: 0 12px;
+            padding: 0 20px;
+            @include mixins.mq-down(md) {
+              padding: 0 8px;
+            }
+
+            a {
+              position: relative;
+              padding-left: 24px;
+              transition: color 0.3s;
+
+              @include mixins.mq-up(md) {
+                &:hover {
+                  color: variables.$primary-dark;
+                }
+              }
+              @include mixins.mq-down(md) {
+                font-size: 1.3rem;
+              }
+
+              &:before {
+                content: '';
+                display: inline-block;
+                width: 15px;
+                height: 19px;
+                background-image: url(../img/daycare/ico_pdf.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include mixins.mq-down(md) {
+                  top: -2px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .u-pcOnly {
+        @include mixins.mq-down(md) {
+          display: none !important;
+        }
+      }
+      .sec-ttl01 {
+        .en {
+          text-align: center;
+          line-height: 1.1;
+
+          &::before {
+            left: 40px;
           }
         }
       }
     }
     .sec__outline{
       margin-top: 108px;
+      @include mixins.mq-down(md) {
+        margin-top: 80px;
+      }
 
       .outline{
         &__head {
@@ -215,6 +413,9 @@
         }
         &__body {
           margin-top: 40px;
+          @include mixins.mq-down(md) {
+            margin-top: 56px;
+          }
         }
 
         &__list {
@@ -223,9 +424,56 @@
             justify-content: flex-start;
             align-items: center;
             margin-top: 56px;
+            position: relative;
+            @include mixins.mq-down(md) {
+              display: block;
+            }
 
             &:first-child {
               margin-top: 0;
+              &:before {
+                content: '';
+                display: inline-block;
+                background-image: url(../img/common/i_bubble.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: -56px;
+                right: -120px;
+                opacity: 0.4;
+                pointer-events: none;
+                @include mixins.animation(waveY-20 8000ms linear 0ms infinite);
+                @include mixins.mq-down(md) {
+                  content: none;
+                  width: 120px;
+                  top: 0;
+                  right: 0;
+                }
+              }
+              &:after {
+                content: '';
+                display: inline-block;
+                background-image: url(../img/common/i_bubble.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 88px;
+                height: 88px;
+                position: absolute;
+                bottom: -16px;
+                left: 33.3%;
+                opacity: 0.4;
+                pointer-events: none;
+                z-index: 2;
+                @include mixins.animation(waveY-20 8000ms linear 0ms infinite);
+                @include mixins.mq-down(md) {
+                  content: none;
+                  width: 68px;
+                  bottom: 0;
+                  left: 0;
+                }
+              }
             }
             &:nth-child(even) {
               flex-direction: row-reverse;
@@ -236,9 +484,69 @@
                 @media screen and (min-width:768px) and (max-width:1024px) {
                   padding-left: 4%;
                 }
+                @include mixins.mq-down(md) {
+                  padding-left: 8%;
+                }
 
                 &:before {
                   transform: translateX(0);
+                }
+              }
+            }
+            &:last-child {
+              &:before {
+                content: '';
+                width: 204px;
+                height: 204px;
+                position: absolute;
+                top: 200px;
+                left: -100px;
+                background: url('../img/common/bg_circle01.svg') no-repeat;
+                background-size: cover;
+                opacity: 0;
+                @include mixins.mq-down(md) {
+                  content: none;
+                  width: 180px;
+                  height: 180px;
+                  top: -20px;
+                  left: -60px;
+                }
+                @include mixins.mq-down(sm) {
+                  width: 160px;
+                  height: 160px;
+                  left: -60px;
+                }
+              }
+              &:after {
+                content: '';
+                width: 48px;
+                height: 48px;
+                position: absolute;
+                bottom: -12px;
+                right: 16%;
+                background: url('../img/common/bg_circle01.svg') no-repeat;
+                background-size: cover;
+                opacity: 0;
+                z-index: 3;
+                @include mixins.mq-down(md) {
+                  content: none;
+                  width: 36px;
+                  height: 36px;
+                  bottom: 0px;
+                  right: 0px;
+                }
+                @include mixins.mq-down(sm) {
+                  width: 32px;
+                  height: 32px;
+                  right: 0px;
+                }
+              }
+              &.js-active {
+                &:before,
+                &:after {
+                  @include mixins.animation(
+                    fadein-b-40 600ms variables.$bezier-easeOutSine 600ms
+                  );
                 }
               }
             }
@@ -250,6 +558,10 @@
               z-index: 2;
               @media screen and (min-width:768px) and (max-width:1024px) {
                 padding-left: 4%;
+              }
+              @include mixins.mq-down(md) {
+                padding-right: 0;
+                padding-left: 8%;
               }
 
               &:before {
@@ -267,6 +579,13 @@
                   top: -28px;
                   bottom: -40px;
                 }
+                @include mixins.mq-down(md) {
+                  width: 100vw;
+                  top: -26px;
+                  bottom: -32px;
+                  transform: translate(0);
+                  border-radius: 10px 0 0 0;
+                }
               }
 
               .name {
@@ -274,16 +593,26 @@
                 &__sub {
                   font-size: 1.4rem;
                   font-weight: 500;
+                  @include mixins.mq-down(md) {
+                    line-height: 1.6;
+                  }
                 }
                 &__main {
                   font-size: 2.8rem;
                   color: variables.$primary-dark;
                   line-height: 1.6;
+                  @include mixins.mq-down(md) {
+                    font-size: 2.6rem;
+                    line-height: 1.2;
+                  }
                 }
               }
               .list-holder {
                 position: relative;
                 margin-top: 20px;
+                @include mixins.mq-down(md) {
+                  margin-top: 12px;
+                }
 
                 .list {
                   display: flex;
@@ -291,6 +620,14 @@
                   align-items: flex-start;
                   border-bottom: 1px solid #b9d6ef;
                   padding: 4px 0;
+                  @include mixins.mq-down(md) {
+                    display: block;
+                    margin-top: 8px;
+
+                    &:first-child {
+                      margin-top: 0;
+                    }
+                  }
 
                   .term {
                     flex: 0 0 17%;
@@ -338,6 +675,12 @@
               padding-bottom: 36.7%;
               position: relative;
               z-index: 5;
+              @include mixins.mq-down(md) {
+                margin-top: 32px;
+                width: 100vw;
+                transform: translateX(-15px);
+                padding-bottom: 64%;
+              }
 
               iframe {
                 position: absolute;
@@ -346,6 +689,9 @@
                 height: 100%;
                 width: 100%;
                 border-radius: 10px;
+                @include mixins.mq-down(md) {
+                  border-radius: 0;
+                }
               }
             }
           }

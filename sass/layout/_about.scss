@@ -1,0 +1,236 @@
+// Foundation
+@use '../foundation/variables';
+@use '../foundation/mixins';
+
+/* ============================================
+// 会社案内
+// ==========================================*/
+.lower-about {
+
+  .about {
+    margin-top: 80px;
+    padding-bottom: 120px;
+
+    .sec__message {
+      .message {
+        &__inner {
+          max-width: 1180px;
+        }
+        &__head {
+
+        }
+        &__body {
+          .lead {
+            font-size: 2.8rem;
+            color: variables.$primary-dark;
+            margin-top: 36px;
+            text-align: center;
+            line-height: 1.7;
+          }
+          .desc {
+            font-weight: 500;
+            max-width: 940px;
+            margin: 32px auto 0;
+          }
+          .name-holder {
+            text-align: right;
+            margin-top: 12px;
+
+            .position {
+              font-weight: 500;
+            }
+            .name {
+              font-size: 2.4rem;
+              display: inline-block;
+              margin-left: 8px;
+            }
+          }
+          .border-box {
+            border: 3px solid variables.$primary-color;
+            border-radius: 10px;
+            position: relative;
+            padding: 37px 64px 96px;
+            margin-top: 64px;
+
+            .ttl {
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translate(-50%,-50%);
+              color: #fff;
+              background-color: variables.$primary-color;
+              border-radius: 100px;
+              text-align: center;
+              padding: 12px 48px;
+              font-size: 2rem;
+
+            }
+            .desc {
+
+            }
+          }
+        }
+      }
+    }
+    .sec__philosophy {
+      background-color: variables.$primary-color;
+      margin-top: 100px;
+      padding-top: 88px;
+      padding-bottom: 88px;
+
+      .philosophy {
+        &__inner {
+          max-width: 1180px;
+        }
+        &__head {
+
+        }
+        &__body {
+          background-color: #fff;
+          padding: 56px 88px 64px;
+          border-radius: 10px;
+          margin-top: 56px;
+
+          .list {
+            margin-top: 26px;
+            &:first-child {
+              margin-top: 0;
+            }
+
+            .term {
+              font-size: 2rem;
+              color: variables.$primary-dark ;
+              border-top: 1px solid #d3d3d3;
+              border-bottom: 1px solid #d3d3d3;
+              padding: 14px 12px;
+            }
+            .desc {
+              padding: 24px 12px 0;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+    .sec__company {
+      margin-top: 96px;
+
+      .company {
+        &__inner {
+          max-width: 1100px;
+        }
+        &__head {
+
+        }
+        &__body {
+          margin-top: 40px;
+          border: 3px solid #cae8f6;
+          border-radius: 10px;
+
+          .list {
+            display: flex;
+            justify-content: flex-start;
+            align-items: stretch;
+            border-bottom: 3px solid #cae8f6;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            .term {
+              flex: 0 0 20%;
+              background-color: #dff1fa;
+              padding: 18px 2.5%;
+              font-size: 1.6rem;
+            }
+            .desc {
+              flex: 0 0 80%;
+              padding: 18px 2.5%;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+    .sec__privacy {
+      margin-top: 80px;
+      padding-top: 96px;
+      padding-bottom: 80px;
+      background-color: variables.$primary-color;
+
+      .privacy {
+        &__inner {
+
+        }
+        &__head {
+
+        }
+        &__body {
+          background-color: #fff;
+          border-radius: 10px;
+          padding: 40px 80px 56px;
+          margin-top: 48px;
+
+          .lead {
+            font-weight: 500;
+          }
+        }
+
+        &__block {
+          margin-top: 32px;
+
+          .head {
+            font-size: 2rem;
+            color: #216cc4;
+            border-top: 1px solid #d3d3d3;
+            border-bottom: 1px solid #d3d3d3;
+            padding: 14px 12px;
+          }
+          .body {
+
+          }
+        }
+        &__list {
+          margin-top: 20px;
+
+          &__item {
+            margin-top: 28px;
+
+            &:first-child {
+              margin-top: 0;
+            }
+
+            .ttl-holder {
+              display: flex;
+              justify-content: flex-start;
+              align-items: flex-start;
+
+              .num {
+                width: 22px;
+                height: 22px;
+                background-color: variables.$primary-dark;
+                font-size: 1.3rem;
+                font-weight: bold;
+                font-family: variables.$font-Montserrat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                border-radius: 50%;
+                margin-right: 8px;
+                margin-top: 4px;
+              }
+              .ttl {
+              }
+            }
+            .desc {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}

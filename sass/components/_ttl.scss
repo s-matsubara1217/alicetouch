@@ -77,14 +77,6 @@
       color: variables.$primary-color;
     }
   }
-  &.-white {
-    .en,
-    .ja {
-      span {
-        color: #fff;
-      }
-    }
-  }
   &.-center {
     align-items: center;
   }
@@ -100,6 +92,14 @@
         &:first-child {
           color: variables.$primary-dark;
         }
+      }
+    }
+  }
+  &.-white {
+    .en,
+    .ja {
+      span {
+        color: #fff;
       }
     }
   }
