@@ -8901,12 +8901,15 @@ a {
     display: none !important;
   }
 }
-.lower-daycare .daycare .sec__assessment .sec-ttl01 .en {
-  text-align: center;
-  line-height: 1.1;
-}
-.lower-daycare .daycare .sec__assessment .sec-ttl01 .en::before {
-  left: 40px;
+@media screen and (max-width: 768px) {
+  .lower-daycare .daycare .sec__assessment .sec-ttl01 .en {
+    text-align: center;
+    line-height: 1.1;
+  }
+  .lower-daycare .daycare .sec__assessment .sec-ttl01 .en::before {
+    top: -20px;
+    left: 46px;
+  }
 }
 .lower-daycare .daycare .sec__outline {
   margin-top: 108px;
@@ -9240,40 +9243,103 @@ a {
 .lower-about .about {
   margin-top: 80px;
   padding-bottom: 120px;
+  position: relative;
+}
+.lower-about .about .sec__message .message .bubble01 {
+  width: 180px;
+  position: absolute;
+  z-index: 1;
+  top: -120px;
+  right: 48px;
+  opacity: 0.4;
+  pointer-events: none;
+  -webkit-animation: waveY-20 8000ms linear 0ms infinite;
+  animation: waveY-20 8000ms linear 0ms infinite;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@media screen and (max-width: 480px) {
+  .lower-about .about .sec__message .message .bubble01 {
+    width: 120px;
+    top: -80px;
+    right: 0;
+  }
+}
+.lower-about .about .sec__message .message .bubble01 .img-box {
+  padding-top: 100%;
 }
 .lower-about .about .sec__message .message__inner {
   max-width: 1180px;
+  position: relative;
 }
-.lower-about .about .sec__message .message__body .lead {
+.lower-about .about .sec__message .message__body .txt-box {
+  position: relative;
+}
+.lower-about .about .sec__message .message__body .txt-box .lead {
   font-size: 2.8rem;
   color: #216cc4;
   margin-top: 36px;
   text-align: center;
   line-height: 1.7;
 }
-.lower-about .about .sec__message .message__body .desc {
+.lower-about .about .sec__message .message__body .txt-box .desc {
   font-weight: 500;
   max-width: 940px;
   margin: 32px auto 0;
 }
-.lower-about .about .sec__message .message__body .name-holder {
+.lower-about .about .sec__message .message__body .txt-box .name-holder {
   text-align: right;
   margin-top: 12px;
 }
-.lower-about .about .sec__message .message__body .name-holder .position {
+.lower-about .about .sec__message .message__body .txt-box .name-holder .position {
   font-weight: 500;
 }
-.lower-about .about .sec__message .message__body .name-holder .name {
+.lower-about .about .sec__message .message__body .txt-box .name-holder .name {
   font-size: 2.4rem;
   display: inline-block;
   margin-left: 8px;
+}
+.lower-about .about .sec__message .message__body .txt-box .bubble02 {
+  width: 66px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: -32px;
+  opacity: 0.4;
+  pointer-events: none;
+  -webkit-animation: waveY-20 8000ms linear 0ms infinite;
+  animation: waveY-20 8000ms linear 0ms infinite;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@media screen and (max-width: 480px) {
+  .lower-about .about .sec__message .message__body .txt-box .bubble02 {
+    width: 48px;
+    bottom: 0px;
+    left: 0;
+  }
+}
+.lower-about .about .sec__message .message__body .txt-box .bubble02 .img-box {
+  padding-top: 100%;
 }
 .lower-about .about .sec__message .message__body .border-box {
   border: 3px solid #1c9dd2;
   border-radius: 10px;
   position: relative;
-  padding: 37px 64px 96px;
+  padding: 60px 64px 96px;
   margin-top: 64px;
+}
+.lower-about .about .sec__message .message__body .border-box:before {
+  content: "";
+  display: inline-block;
+  width: 195px;
+  height: 126px;
+  background-image: url(../img/about/deco_apple.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -28px;
+  right: 100px;
 }
 .lower-about .about .sec__message .message__body .border-box .ttl {
   position: absolute;
@@ -9286,6 +9352,9 @@ a {
   text-align: center;
   padding: 12px 48px;
   font-size: 2rem;
+}
+.lower-about .about .sec__message .message__body .border-box .desc {
+  font-weight: 500;
 }
 .lower-about .about .sec__philosophy {
   background-color: #1c9dd2;
@@ -9329,15 +9398,28 @@ a {
   margin-top: 40px;
   border: 3px solid #cae8f6;
   border-radius: 10px;
+  position: relative;
+}
+.lower-about .about .sec__company .company__body .list-holder {
+  position: relative;
+  z-index: 3;
 }
 .lower-about .about .sec__company .company__body .list {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
   border-bottom: 3px solid #cae8f6;
+  position: relative;
+  z-index: 2;
 }
-.lower-about .about .sec__company .company__body .list:last-child {
+.lower-about .about .sec__company .company__body .list:first-child .term {
+  border-radius: 5px 0 0 0;
+}
+.lower-about .about .sec__company .company__body .list:last-of-type {
   border-bottom: none;
+}
+.lower-about .about .sec__company .company__body .list:last-of-type .term {
+  border-radius: 0 0 0 5px;
 }
 .lower-about .about .sec__company .company__body .list .term {
   flex: 0 0 20%;
@@ -9349,6 +9431,50 @@ a {
   flex: 0 0 80%;
   padding: 18px 2.5%;
   font-weight: 500;
+}
+.lower-about .about .sec__company .company__body .bubble01 {
+  width: 170px;
+  position: absolute;
+  top: -28px;
+  left: -160px;
+  opacity: 0.4;
+  pointer-events: none;
+  -webkit-animation: waveY-20 8000ms linear 0ms infinite;
+  animation: waveY-20 8000ms linear 0ms infinite;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@media screen and (max-width: 480px) {
+  .lower-about .about .sec__company .company__body .bubble01 {
+    width: 120px;
+    top: 0;
+    left: 0;
+  }
+}
+.lower-about .about .sec__company .company__body .bubble01 .img-box {
+  padding-top: 100%;
+}
+.lower-about .about .sec__company .company__body .bubble02 {
+  width: 170px;
+  position: absolute;
+  bottom: 16px;
+  right: -100px;
+  opacity: 0.4;
+  pointer-events: none;
+  -webkit-animation: waveY-20 6000ms linear 0ms infinite;
+  animation: waveY-20 6000ms linear 0ms infinite;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@media screen and (max-width: 480px) {
+  .lower-about .about .sec__company .company__body .bubble02 {
+    width: 120px;
+    bottom: 0;
+    right: 0;
+  }
+}
+.lower-about .about .sec__company .company__body .bubble02 .img-box {
+  padding-top: 100%;
 }
 .lower-about .about .sec__privacy {
   margin-top: 80px;

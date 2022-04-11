@@ -392,11 +392,14 @@
       }
       .sec-ttl01 {
         .en {
-          text-align: center;
-          line-height: 1.1;
+          @include mixins.mq-down(md) {
+            text-align: center;
+            line-height: 1.1;
 
-          &::before {
-            left: 40px;
+            &::before {
+              top: -20px;
+              left: 46px;
+            }
           }
         }
       }

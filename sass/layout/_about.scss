@@ -10,47 +10,104 @@
   .about {
     margin-top: 80px;
     padding-bottom: 120px;
+    position: relative;
 
     .sec__message {
       .message {
+        .bubble01 {
+          width: 180px;
+          position: absolute;
+          z-index: 1;
+          top: -120px;
+          right: 48px;
+          opacity: 0.4;
+          pointer-events: none;
+          @include mixins.animation(waveY-20 8000ms linear 0ms infinite);
+          @include mixins.mq-down(sm) {
+            width: 120px;
+            top: -80px;
+            right: 0;
+          }
+          .img-box {
+            padding-top: 100%;
+          }
+        }
+
+
         &__inner {
           max-width: 1180px;
+          position: relative;
         }
         &__head {
 
         }
         &__body {
-          .lead {
-            font-size: 2.8rem;
-            color: variables.$primary-dark;
-            margin-top: 36px;
-            text-align: center;
-            line-height: 1.7;
-          }
-          .desc {
-            font-weight: 500;
-            max-width: 940px;
-            margin: 32px auto 0;
-          }
-          .name-holder {
-            text-align: right;
-            margin-top: 12px;
+          .txt-box {
+            position: relative;
 
-            .position {
-              font-weight: 500;
+            .lead {
+              font-size: 2.8rem;
+              color: variables.$primary-dark;
+              margin-top: 36px;
+              text-align: center;
+              line-height: 1.7;
             }
-            .name {
-              font-size: 2.4rem;
-              display: inline-block;
-              margin-left: 8px;
+            .desc {
+              font-weight: 500;
+              max-width: 940px;
+              margin: 32px auto 0;
+            }
+            .name-holder {
+              text-align: right;
+              margin-top: 12px;
+
+              .position {
+                font-weight: 500;
+              }
+              .name {
+                font-size: 2.4rem;
+                display: inline-block;
+                margin-left: 8px;
+              }
+            }
+            .bubble02 {
+              width: 66px;
+              position: absolute;
+              z-index: 1;
+              bottom: 0;
+              left: -32px;
+              opacity: 0.4;
+              pointer-events: none;
+              @include mixins.animation(waveY-20 8000ms linear 0ms infinite);
+              @include mixins.mq-down(sm) {
+                width: 48px;
+                bottom: 0px;
+                left: 0;
+              }
+              .img-box {
+                padding-top: 100%;
+              }
             }
           }
           .border-box {
             border: 3px solid variables.$primary-color;
             border-radius: 10px;
             position: relative;
-            padding: 37px 64px 96px;
+            padding: 60px 64px 96px;
             margin-top: 64px;
+
+            &:before {
+              content: '';
+              display: inline-block;
+              width: 195px;
+              height: 126px;
+              background-image: url(../img/about/deco_apple.png);
+              background-size: contain;
+              background-repeat: no-repeat;
+              position: absolute;
+              bottom: -28px;
+              right: 100px;
+            }
 
             .ttl {
               position: absolute;
@@ -66,7 +123,7 @@
 
             }
             .desc {
-
+              font-weight: 500;
             }
           }
         }
@@ -116,6 +173,8 @@
       margin-top: 96px;
 
       .company {
+
+
         &__inner {
           max-width: 1100px;
         }
@@ -126,15 +185,30 @@
           margin-top: 40px;
           border: 3px solid #cae8f6;
           border-radius: 10px;
+          position: relative;
 
+          .list-holder {
+            position: relative;
+            z-index: 3;
+          }
           .list {
             display: flex;
             justify-content: flex-start;
             align-items: stretch;
             border-bottom: 3px solid #cae8f6;
+            position: relative;
+            z-index: 2;
 
-            &:last-child {
+            &:first-child {
+              .term {
+                border-radius: 5px 0 0 0;
+              }
+            }
+            &:last-of-type {
               border-bottom: none;
+              .term {
+                border-radius: 0 0 0 5px;
+              }
             }
 
             .term {
@@ -147,6 +221,41 @@
               flex: 0 0 80%;
               padding: 18px 2.5%;
               font-weight: 500;
+            }
+          }
+
+          .bubble01 {
+            width: 170px;
+            position: absolute;
+            top: -28px;
+            left: -160px;
+            opacity: 0.4;
+            pointer-events: none;
+            @include mixins.animation(waveY-20 8000ms linear 0ms infinite);
+            @include mixins.mq-down(sm) {
+              width: 120px;
+              top: 0;
+              left: 0;
+            }
+            .img-box {
+              padding-top: 100%;
+            }
+          }
+          .bubble02 {
+            width: 170px;
+            position: absolute;
+            bottom: 16px;
+            right: -100px;
+            opacity: 0.4;
+            pointer-events: none;
+            @include mixins.animation(waveY-20 6000ms linear 0ms infinite);
+            @include mixins.mq-down(sm) {
+              width: 120px;
+              bottom: 0;
+              right: 0;
+            }
+            .img-box {
+              padding-top: 100%;
             }
           }
         }
