@@ -9290,7 +9290,7 @@ a {
 }
 @media screen and (max-width: 768px) {
   .lower-about .about .sec__message .message__body .txt-box .lead {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-top: 24px;
     text-align: left;
   }
@@ -9406,6 +9406,7 @@ a {
 }
 .lower-about .about .sec__message .message__body .border-box .desc {
   font-weight: 500;
+  word-break: break-all;
 }
 .lower-about .about .sec__philosophy {
   background-color: #1c9dd2;
@@ -9510,11 +9511,21 @@ a {
     border-radius: 5px 5px 0 0;
   }
 }
+@media screen and (min-width: 769px) {
+  .lower-about .about .sec__company .company__body .list:first-child .desc {
+    border-radius: 0 5px 0 0;
+  }
+}
 .lower-about .about .sec__company .company__body .list:last-of-type {
   border-bottom: none;
 }
 .lower-about .about .sec__company .company__body .list:last-of-type .term {
   border-radius: 0 0 0 5px;
+}
+@media screen and (min-width: 769px) {
+  .lower-about .about .sec__company .company__body .list:last-of-type .desc {
+    border-radius: 0 0 5px 0;
+  }
 }
 @media screen and (max-width: 768px) {
   .lower-about .about .sec__company .company__body .list:last-of-type .desc {

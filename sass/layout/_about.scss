@@ -37,7 +37,6 @@
           }
         }
 
-
         &__inner {
           max-width: 1180px;
           position: relative;
@@ -56,7 +55,7 @@
               text-align: center;
               line-height: 1.7;
               @include mixins.mq-down(md) {
-                font-size: 2rem;
+                font-size: 1.8rem;
                 margin-top: 24px;
                 text-align: left;
               }
@@ -158,6 +157,7 @@
             }
             .desc {
               font-weight: 500;
+              word-break: break-all;
             }
           }
         }
@@ -264,6 +264,11 @@
                   border-radius: 5px 5px 0 0;
                 }
               }
+              .desc {
+                @include mixins.mq-up(md) {
+                  border-radius: 0 5px 0 0;
+                }
+              }
             }
             &:last-of-type {
               border-bottom: none;
@@ -271,6 +276,9 @@
                 border-radius: 0 0 0 5px;
               }
               .desc {
+                @include mixins.mq-up(md) {
+                  border-radius: 0 0 5px 0;
+                }
                 @include mixins.mq-down(md) {
                   border-radius: 0 0 5px 5px;
                 }
