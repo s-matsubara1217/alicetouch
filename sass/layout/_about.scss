@@ -11,6 +11,10 @@
     margin-top: 80px;
     padding-bottom: 120px;
     position: relative;
+    @include mixins.mq-down(md) {
+      margin-top: 48px;
+      padding-bottom: 56px;
+    }
 
     .sec__message {
       .message {
@@ -24,7 +28,7 @@
           pointer-events: none;
           @include mixins.animation(waveY-20 8000ms linear 0ms infinite);
           @include mixins.mq-down(sm) {
-            width: 120px;
+            width: 100px;
             top: -80px;
             right: 0;
           }
@@ -51,15 +55,28 @@
               margin-top: 36px;
               text-align: center;
               line-height: 1.7;
+              @include mixins.mq-down(md) {
+                font-size: 2rem;
+                margin-top: 24px;
+                text-align: left;
+              }
             }
             .desc {
               font-weight: 500;
               max-width: 940px;
               margin: 32px auto 0;
+              position: relative;
+              z-index: 2;
+              @include mixins.mq-down(md) {
+                margin-top: 20px;
+              }
             }
             .name-holder {
               text-align: right;
               margin-top: 12px;
+              @include mixins.mq-down(md) {
+                margin-top: 8px;
+              }
 
               .position {
                 font-weight: 500;
@@ -68,6 +85,9 @@
                 font-size: 2.4rem;
                 display: inline-block;
                 margin-left: 8px;
+                @include mixins.mq-down(md) {
+                  font-size: 2rem;
+                }
               }
             }
             .bubble02 {
@@ -95,6 +115,10 @@
             position: relative;
             padding: 60px 64px 96px;
             margin-top: 64px;
+            @include mixins.mq-down(md) {
+              margin-top: 56px;
+              padding: 40px 24px 68px;
+            }
 
             &:before {
               content: '';
@@ -107,6 +131,11 @@
               position: absolute;
               bottom: -28px;
               right: 100px;
+              @include mixins.mq-down(md) {
+                transform: scale(0.7);
+                transform-origin: bottom right;
+                right: 16px;
+              }
             }
 
             .ttl {
@@ -120,7 +149,11 @@
               text-align: center;
               padding: 12px 48px;
               font-size: 2rem;
-
+              @include mixins.mq-down(md) {
+                padding: 6px 16px;
+                font-size: 1.6rem;
+                width: 85%;
+              }
             }
             .desc {
               font-weight: 500;
@@ -134,6 +167,11 @@
       margin-top: 100px;
       padding-top: 88px;
       padding-bottom: 88px;
+      @include mixins.mq-down(md) {
+        margin-top: 64px;
+        padding-top: 72px;
+        padding-bottom: 64px;
+      }
 
       .philosophy {
         &__inner {
@@ -147,6 +185,10 @@
           padding: 56px 88px 64px;
           border-radius: 10px;
           margin-top: 56px;
+          @include mixins.mq-down(md) {
+            margin-top: 40px;
+            padding: 36px 20px 40px;
+          }
 
           .list {
             margin-top: 26px;
@@ -160,10 +202,17 @@
               border-top: 1px solid #d3d3d3;
               border-bottom: 1px solid #d3d3d3;
               padding: 14px 12px;
+              @include mixins.mq-down(md) {
+                font-size: 1.8rem;
+                padding: 10px 12px;
+              }
             }
             .desc {
               padding: 24px 12px 0;
               font-weight: 500;
+              @include mixins.mq-down(md) {
+                padding: 12px 12px 0;
+              }
             }
           }
         }
@@ -171,9 +220,11 @@
     }
     .sec__company {
       margin-top: 96px;
+      @include mixins.mq-down(md) {
+        margin-top: 72px;
+      }
 
       .company {
-
 
         &__inner {
           max-width: 1100px;
@@ -186,6 +237,9 @@
           border: 3px solid #cae8f6;
           border-radius: 10px;
           position: relative;
+          @include mixins.mq-down(md) {
+            margin-top: 28px;
+          }
 
           .list-holder {
             position: relative;
@@ -198,16 +252,27 @@
             border-bottom: 3px solid #cae8f6;
             position: relative;
             z-index: 2;
+            @include mixins.mq-down(md) {
+              display: block;
+            }
 
             &:first-child {
               .term {
                 border-radius: 5px 0 0 0;
+                @include mixins.mq-down(md) {
+                  border-radius: 5px 5px 0 0;
+                }
               }
             }
             &:last-of-type {
               border-bottom: none;
               .term {
                 border-radius: 0 0 0 5px;
+              }
+              .desc {
+                @include mixins.mq-down(md) {
+                  border-radius: 0 0 5px 5px;
+                }
               }
             }
 
@@ -216,11 +281,18 @@
               background-color: #dff1fa;
               padding: 18px 2.5%;
               font-size: 1.6rem;
+              @include mixins.mq-down(md) {
+                padding: 12px 4%;
+              }
             }
             .desc {
               flex: 0 0 80%;
               padding: 18px 2.5%;
               font-weight: 500;
+              background-color: #f5fbff;
+              @include mixins.mq-down(md) {
+                padding: 16px 4%;
+              }
             }
           }
 
@@ -233,9 +305,9 @@
             pointer-events: none;
             @include mixins.animation(waveY-20 8000ms linear 0ms infinite);
             @include mixins.mq-down(sm) {
-              width: 120px;
-              top: 0;
-              left: 0;
+              width: 72px;
+              top: -48px;
+              left: -16px;
             }
             .img-box {
               padding-top: 100%;
@@ -244,15 +316,15 @@
           .bubble02 {
             width: 170px;
             position: absolute;
-            bottom: 16px;
+            bottom: -16px;
             right: -100px;
             opacity: 0.4;
             pointer-events: none;
             @include mixins.animation(waveY-20 6000ms linear 0ms infinite);
             @include mixins.mq-down(sm) {
-              width: 120px;
-              bottom: 0;
-              right: 0;
+              width: 72px;
+              bottom: -48px;
+              right: -16px;
             }
             .img-box {
               padding-top: 100%;
@@ -266,19 +338,39 @@
       padding-top: 96px;
       padding-bottom: 80px;
       background-color: variables.$primary-color;
+      @include mixins.mq-down(md) {
+        margin-top: 64px;
+        padding-top: 72px;
+        padding-bottom: 56px;
+      }
 
       .privacy {
         &__inner {
 
         }
         &__head {
-
+          .sec-ttl01 {
+            .en {
+              span {
+                &:nth-child(7) {
+                  margin-right: 16px;
+                  @include mixins.mq-down(md) {
+                    margin-right: 8px;
+                  }
+                }
+              }
+            }
+          }
         }
         &__body {
           background-color: #fff;
           border-radius: 10px;
           padding: 40px 80px 56px;
           margin-top: 48px;
+          @include mixins.mq-down(md) {
+            margin-top: 32px;
+            padding: 28px 20px 32px;
+          }
 
           .lead {
             font-weight: 500;
@@ -287,6 +379,9 @@
 
         &__block {
           margin-top: 32px;
+          @include mixins.mq-down(md) {
+            margin-top: 28px;
+          }
 
           .head {
             font-size: 2rem;
@@ -294,6 +389,10 @@
             border-top: 1px solid #d3d3d3;
             border-bottom: 1px solid #d3d3d3;
             padding: 14px 12px;
+            @include mixins.mq-down(md) {
+              font-size: 1.8rem;
+              padding: 10px 12px;
+            }
           }
           .body {
 
@@ -301,9 +400,15 @@
         }
         &__list {
           margin-top: 20px;
+          @include mixins.mq-down(md) {
+            margin-top: 16px;
+          }
 
           &__item {
             margin-top: 28px;
+            @include mixins.mq-down(md) {
+              margin-top: 16px;
+            }
 
             &:first-child {
               margin-top: 0;

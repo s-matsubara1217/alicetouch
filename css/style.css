@@ -9245,6 +9245,12 @@ a {
   padding-bottom: 120px;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .lower-about .about {
+    margin-top: 48px;
+    padding-bottom: 56px;
+  }
+}
 .lower-about .about .sec__message .message .bubble01 {
   width: 180px;
   position: absolute;
@@ -9260,7 +9266,7 @@ a {
 }
 @media screen and (max-width: 480px) {
   .lower-about .about .sec__message .message .bubble01 {
-    width: 120px;
+    width: 100px;
     top: -80px;
     right: 0;
   }
@@ -9282,14 +9288,33 @@ a {
   text-align: center;
   line-height: 1.7;
 }
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__message .message__body .txt-box .lead {
+    font-size: 2rem;
+    margin-top: 24px;
+    text-align: left;
+  }
+}
 .lower-about .about .sec__message .message__body .txt-box .desc {
   font-weight: 500;
   max-width: 940px;
   margin: 32px auto 0;
+  position: relative;
+  z-index: 2;
+}
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__message .message__body .txt-box .desc {
+    margin-top: 20px;
+  }
 }
 .lower-about .about .sec__message .message__body .txt-box .name-holder {
   text-align: right;
   margin-top: 12px;
+}
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__message .message__body .txt-box .name-holder {
+    margin-top: 8px;
+  }
 }
 .lower-about .about .sec__message .message__body .txt-box .name-holder .position {
   font-weight: 500;
@@ -9298,6 +9323,11 @@ a {
   font-size: 2.4rem;
   display: inline-block;
   margin-left: 8px;
+}
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__message .message__body .txt-box .name-holder .name {
+    font-size: 2rem;
+  }
 }
 .lower-about .about .sec__message .message__body .txt-box .bubble02 {
   width: 66px;
@@ -9329,6 +9359,12 @@ a {
   padding: 60px 64px 96px;
   margin-top: 64px;
 }
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__message .message__body .border-box {
+    margin-top: 56px;
+    padding: 40px 24px 68px;
+  }
+}
 .lower-about .about .sec__message .message__body .border-box:before {
   content: "";
   display: inline-block;
@@ -9340,6 +9376,13 @@ a {
   position: absolute;
   bottom: -28px;
   right: 100px;
+}
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__message .message__body .border-box:before {
+    transform: scale(0.7);
+    transform-origin: bottom right;
+    right: 16px;
+  }
 }
 .lower-about .about .sec__message .message__body .border-box .ttl {
   position: absolute;
@@ -9353,6 +9396,13 @@ a {
   padding: 12px 48px;
   font-size: 2rem;
 }
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__message .message__body .border-box .ttl {
+    padding: 6px 16px;
+    font-size: 1.6rem;
+    width: 85%;
+  }
+}
 .lower-about .about .sec__message .message__body .border-box .desc {
   font-weight: 500;
 }
@@ -9362,6 +9412,13 @@ a {
   padding-top: 88px;
   padding-bottom: 88px;
 }
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__philosophy {
+    margin-top: 64px;
+    padding-top: 72px;
+    padding-bottom: 64px;
+  }
+}
 .lower-about .about .sec__philosophy .philosophy__inner {
   max-width: 1180px;
 }
@@ -9370,6 +9427,12 @@ a {
   padding: 56px 88px 64px;
   border-radius: 10px;
   margin-top: 56px;
+}
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__philosophy .philosophy__body {
+    margin-top: 40px;
+    padding: 36px 20px 40px;
+  }
 }
 .lower-about .about .sec__philosophy .philosophy__body .list {
   margin-top: 26px;
@@ -9384,12 +9447,28 @@ a {
   border-bottom: 1px solid #d3d3d3;
   padding: 14px 12px;
 }
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__philosophy .philosophy__body .list .term {
+    font-size: 1.8rem;
+    padding: 10px 12px;
+  }
+}
 .lower-about .about .sec__philosophy .philosophy__body .list .desc {
   padding: 24px 12px 0;
   font-weight: 500;
 }
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__philosophy .philosophy__body .list .desc {
+    padding: 12px 12px 0;
+  }
+}
 .lower-about .about .sec__company {
   margin-top: 96px;
+}
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__company {
+    margin-top: 72px;
+  }
 }
 .lower-about .about .sec__company .company__inner {
   max-width: 1100px;
@@ -9399,6 +9478,11 @@ a {
   border: 3px solid #cae8f6;
   border-radius: 10px;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__company .company__body {
+    margin-top: 28px;
+  }
 }
 .lower-about .about .sec__company .company__body .list-holder {
   position: relative;
@@ -9412,8 +9496,18 @@ a {
   position: relative;
   z-index: 2;
 }
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__company .company__body .list {
+    display: block;
+  }
+}
 .lower-about .about .sec__company .company__body .list:first-child .term {
   border-radius: 5px 0 0 0;
+}
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__company .company__body .list:first-child .term {
+    border-radius: 5px 5px 0 0;
+  }
 }
 .lower-about .about .sec__company .company__body .list:last-of-type {
   border-bottom: none;
@@ -9421,16 +9515,32 @@ a {
 .lower-about .about .sec__company .company__body .list:last-of-type .term {
   border-radius: 0 0 0 5px;
 }
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__company .company__body .list:last-of-type .desc {
+    border-radius: 0 0 5px 5px;
+  }
+}
 .lower-about .about .sec__company .company__body .list .term {
   flex: 0 0 20%;
   background-color: #dff1fa;
   padding: 18px 2.5%;
   font-size: 1.6rem;
 }
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__company .company__body .list .term {
+    padding: 12px 4%;
+  }
+}
 .lower-about .about .sec__company .company__body .list .desc {
   flex: 0 0 80%;
   padding: 18px 2.5%;
   font-weight: 500;
+  background-color: #f5fbff;
+}
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__company .company__body .list .desc {
+    padding: 16px 4%;
+  }
 }
 .lower-about .about .sec__company .company__body .bubble01 {
   width: 170px;
@@ -9446,9 +9556,9 @@ a {
 }
 @media screen and (max-width: 480px) {
   .lower-about .about .sec__company .company__body .bubble01 {
-    width: 120px;
-    top: 0;
-    left: 0;
+    width: 72px;
+    top: -48px;
+    left: -16px;
   }
 }
 .lower-about .about .sec__company .company__body .bubble01 .img-box {
@@ -9457,7 +9567,7 @@ a {
 .lower-about .about .sec__company .company__body .bubble02 {
   width: 170px;
   position: absolute;
-  bottom: 16px;
+  bottom: -16px;
   right: -100px;
   opacity: 0.4;
   pointer-events: none;
@@ -9468,9 +9578,9 @@ a {
 }
 @media screen and (max-width: 480px) {
   .lower-about .about .sec__company .company__body .bubble02 {
-    width: 120px;
-    bottom: 0;
-    right: 0;
+    width: 72px;
+    bottom: -48px;
+    right: -16px;
   }
 }
 .lower-about .about .sec__company .company__body .bubble02 .img-box {
@@ -9482,17 +9592,43 @@ a {
   padding-bottom: 80px;
   background-color: #1c9dd2;
 }
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__privacy {
+    margin-top: 64px;
+    padding-top: 72px;
+    padding-bottom: 56px;
+  }
+}
+.lower-about .about .sec__privacy .privacy__head .sec-ttl01 .en span:nth-child(7) {
+  margin-right: 16px;
+}
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__privacy .privacy__head .sec-ttl01 .en span:nth-child(7) {
+    margin-right: 8px;
+  }
+}
 .lower-about .about .sec__privacy .privacy__body {
   background-color: #fff;
   border-radius: 10px;
   padding: 40px 80px 56px;
   margin-top: 48px;
 }
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__privacy .privacy__body {
+    margin-top: 32px;
+    padding: 28px 20px 32px;
+  }
+}
 .lower-about .about .sec__privacy .privacy__body .lead {
   font-weight: 500;
 }
 .lower-about .about .sec__privacy .privacy__block {
   margin-top: 32px;
+}
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__privacy .privacy__block {
+    margin-top: 28px;
+  }
 }
 .lower-about .about .sec__privacy .privacy__block .head {
   font-size: 2rem;
@@ -9501,11 +9637,27 @@ a {
   border-bottom: 1px solid #d3d3d3;
   padding: 14px 12px;
 }
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__privacy .privacy__block .head {
+    font-size: 1.8rem;
+    padding: 10px 12px;
+  }
+}
 .lower-about .about .sec__privacy .privacy__list {
   margin-top: 20px;
 }
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__privacy .privacy__list {
+    margin-top: 16px;
+  }
+}
 .lower-about .about .sec__privacy .privacy__list__item {
   margin-top: 28px;
+}
+@media screen and (max-width: 768px) {
+  .lower-about .about .sec__privacy .privacy__list__item {
+    margin-top: 16px;
+  }
 }
 .lower-about .about .sec__privacy .privacy__list__item:first-child {
   margin-top: 0;
