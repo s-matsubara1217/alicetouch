@@ -429,6 +429,7 @@
               align-items: flex-start;
 
               .num {
+                flex: 0 0 22px;
                 width: 22px;
                 height: 22px;
                 background-color: variables.$primary-dark;

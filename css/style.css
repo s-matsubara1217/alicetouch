@@ -9680,6 +9680,7 @@ a {
   align-items: flex-start;
 }
 .lower-about .about .sec__privacy .privacy__list__item .ttl-holder .num {
+  flex: 0 0 22px;
   width: 22px;
   height: 22px;
   background-color: #216cc4;
