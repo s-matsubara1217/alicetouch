@@ -9356,7 +9356,7 @@ a {
   border: 3px solid #1c9dd2;
   border-radius: 10px;
   position: relative;
-  padding: 60px 64px 96px;
+  padding: 72px 64px 96px;
   margin-top: 64px;
 }
 @media screen and (max-width: 768px) {
@@ -9374,7 +9374,7 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  bottom: -28px;
+  bottom: -40px;
   right: 100px;
 }
 @media screen and (max-width: 768px) {
@@ -9435,7 +9435,7 @@ a {
   }
 }
 .lower-about .about .sec__philosophy .philosophy__body .list {
-  margin-top: 26px;
+  margin-top: 32px;
 }
 .lower-about .about .sec__philosophy .philosophy__body .list:first-child {
   margin-top: 0;
@@ -9454,7 +9454,7 @@ a {
   }
 }
 .lower-about .about .sec__philosophy .philosophy__body .list .desc {
-  padding: 24px 12px 0;
+  padding: 20px 12px 0;
   font-weight: 500;
 }
 @media screen and (max-width: 768px) {
@@ -9595,8 +9595,8 @@ a {
 @media screen and (max-width: 768px) {
   .lower-about .about .sec__privacy {
     margin-top: 64px;
-    padding-top: 72px;
-    padding-bottom: 56px;
+    padding-top: 56px;
+    padding-bottom: 72px;
   }
 }
 .lower-about .about .sec__privacy .privacy__head .sec-ttl01 .en span:nth-child(7) {

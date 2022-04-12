@@ -113,7 +113,7 @@
             border: 3px solid variables.$primary-color;
             border-radius: 10px;
             position: relative;
-            padding: 60px 64px 96px;
+            padding: 72px 64px 96px;
             margin-top: 64px;
             @include mixins.mq-down(md) {
               margin-top: 56px;
@@ -129,7 +129,7 @@
               background-size: contain;
               background-repeat: no-repeat;
               position: absolute;
-              bottom: -28px;
+              bottom: -40px;
               right: 100px;
               @include mixins.mq-down(md) {
                 transform: scale(0.7);
@@ -191,7 +191,7 @@
           }
 
           .list {
-            margin-top: 26px;
+            margin-top: 32px;
             &:first-child {
               margin-top: 0;
             }
@@ -208,7 +208,7 @@
               }
             }
             .desc {
-              padding: 24px 12px 0;
+              padding: 20px 12px 0;
               font-weight: 500;
               @include mixins.mq-down(md) {
                 padding: 12px 12px 0;
@@ -340,8 +340,8 @@
       background-color: variables.$primary-color;
       @include mixins.mq-down(md) {
         margin-top: 64px;
-        padding-top: 72px;
-        padding-bottom: 56px;
+        padding-top: 56px;
+        padding-bottom: 72px;
       }
 
       .privacy {
