@@ -73,7 +73,8 @@
             }
             .name-holder {
               text-align: right;
-              margin-top: 12px;
+              max-width: 940px;
+              margin: 12px auto 0;
               @include mixins.mq-down(md) {
                 margin-top: 8px;
               }

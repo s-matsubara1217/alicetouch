@@ -9309,7 +9309,8 @@ a {
 }
 .lower-about .about .sec__message .message__body .txt-box .name-holder {
   text-align: right;
-  margin-top: 12px;
+  max-width: 940px;
+  margin: 12px auto 0;
 }
 @media screen and (max-width: 768px) {
   .lower-about .about .sec__message .message__body .txt-box .name-holder {
