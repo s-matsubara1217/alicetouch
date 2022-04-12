@@ -9533,7 +9533,7 @@ a {
   }
 }
 .lower-about .about .sec__company .company__body .list .desc {
-  flex: 0 0 80%;
+  flex: 1 1 auto;
   padding: 18px 2.5%;
   font-weight: 500;
   background-color: #f5fbff;
