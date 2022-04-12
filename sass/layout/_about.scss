@@ -113,7 +113,7 @@
             border: 3px solid variables.$primary-color;
             border-radius: 10px;
             position: relative;
-            padding: 72px 64px 96px;
+            padding: 64px 64px 96px;
             margin-top: 64px;
             @include mixins.mq-down(md) {
               margin-top: 56px;

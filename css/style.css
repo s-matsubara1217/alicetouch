@@ -9356,7 +9356,7 @@ a {
   border: 3px solid #1c9dd2;
   border-radius: 10px;
   position: relative;
-  padding: 72px 64px 96px;
+  padding: 64px 64px 96px;
   margin-top: 64px;
 }
 @media screen and (max-width: 768px) {
