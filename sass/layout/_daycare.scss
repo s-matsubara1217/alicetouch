@@ -559,12 +559,8 @@
               padding-right: 6%;
               position: relative;
               z-index: 2;
-              @media screen and (min-width:768px) and (max-width:1024px) {
-                padding-left: 4%;
-              }
-              @include mixins.mq-down(md) {
-                padding-right: 0;
-                padding-left: 8%;
+              @include mixins.mq-up(md) {
+                background-color: #dff1fa;
               }
 
               &:before {
@@ -589,6 +585,19 @@
                   transform: translate(0);
                   border-radius: 10px 0 0 0;
                 }
+              }
+
+              @include mixins.mq-up(md) {
+                &:before {
+                  content: none;
+                }
+              }
+              @media screen and (min-width:768px) and (max-width:1024px) {
+                padding-left: 4%;
+              }
+              @include mixins.mq-down(md) {
+                padding-right: 0;
+                padding-left: 8%;
               }
 
               .name {
