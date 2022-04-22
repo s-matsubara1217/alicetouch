@@ -215,7 +215,290 @@
 
 				<!-- CONTENTS -->
         <div class="data">
+          <div class="data__inner innerWrap">
+            <div class="sections">
+              <div class="sections__wrap custom-chart-container ">
 
+                <!-- 1.年齢構成（縦棒グラフ） -->
+                <section class="sections__item -m -bar js-set_chart animation slideup_fade" data-chart="bar">
+                  <div class="count">1</div>
+                  <div class="sections__item__wrap">
+                    <div class="hd"><h2 class="hd__ttl">年齢構成</h2></div>
+                    <div class="contents">
+                      <div class="contents__visual">
+                        <canvas
+                          class="barChart"
+                          data-chart='{"10代": 4, "20代": 15, "30代": 17, "40代": 18, "50代": 18, "60代":20, "70代":7}'
+                          data-bg="[#216cc4,#1c9dd2,#1cc3d2,#5bd9de,#eed066,#eca64c,#e37e3b]"
+                        ></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- 2.男女構成（横棒グラフ） -->
+                <section class="sections__item -m -line js-set_chart animation slideup_fade" data-chart="line">
+                  <div class="count">2</div>
+                  <div class="sections__item__wrap">
+                    <div class="hd"><h2 class="hd__ttl">男女構成</h2></div>
+                    <div class="contents">
+                      <div class="contents__visual">
+                        <div class="lineChart">
+                          <div class="lineChart__item js-set_line -bg-color01" data-num="34"></div>
+                          <div class="lineChart__item js-set_line -bg-color02" data-num="66"></div>
+                        </div>
+                      </div>
+                      <div class="contents__detail">
+                        <div class="data">
+                          <div class="icon -men">
+                            <div class="img-box">
+                              <img class="ofi" src="img/data/ico_men.png" alt="men">
+                            </div>
+                          </div>
+                          <p class="data__body">
+                            <span class="js-set_count num" data-num="34">0</span>％
+                          </p>
+                        </div>
+                        <span class="separate">:</span>
+                        <div class="data">
+                          <div class="icon -women">
+                            <div class="img-box">
+                              <img class="ofi" src="img/data/ico_women.png" alt="women">
+                            </div>
+                          </div>
+                          <p class="data__body">
+                            <span class="js-set_count num" data-num="66">0</span>％
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- 3.中途正社員採用率（表 / カウントアップ） -->
+                <section class="sections__item -m js-set_chart -count animation slideup_fade" data-chart="count">
+                  <div class="count">3</div>
+                  <div class="sections__item__wrap">
+                    <div class="hd"><h2 class="hd__ttl">中途正社員採用率</h2></div>
+                    <div class="contents">
+                      <div class="contents__visual">
+                        <div class="table">
+                          <tr>
+                            <th>2019年</th>
+                            <th>2020年</th>
+                            <th>2021年</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              <span class="js-set_count num" data-num="100">0</span>%
+                            </td>
+                            <td>
+                              <span class="js-set_count num" data-num="100">0</span>%
+                            </td>
+                            <td>
+                              <span class="js-set_count num" data-num="100">0</span>%
+                            </td>
+                          </tr>
+                        </div>
+                        <p class="txt">
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- 4.経験者 or 未経験（横棒グラフ） -->
+                <section class="sections__item -m -line -line2 js-set_chart animation slideup_fade" data-chart="line">
+                  <div class="count">4</div>
+                  <div class="sections__item__wrap">
+                    <div class="hd"><h2 class="hd__ttl">経験者 or 未経験</h2></div>
+                    <div class="contents">
+                      <div class="contents__visual">
+                        <div class="lineChart">
+                          <div class="lineChart__item js-set_line -bg-color01" data-num="76"></div>
+                          <div class="lineChart__item js-set_line -bg-color02" data-num="24"></div>
+                        </div>
+                      </div>
+                      <div class="contents__detail">
+                        <div class="data">
+                          <p class="data__txt bg-blue">未経験者</p>
+                          <p class="data__body">
+                            <span class="js-set_count num" data-num="76">0</span>%
+                          </p>
+                        </div>
+                        <span class="separate">:</span>
+                        <div class="data">
+                          <p class="data__txt bg-red">経験者</p>
+                          <p class="data__body">
+                            <span class="js-set_count num" data-num="24">0</span>%
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- 5.平均勤続年数（カウントアップのみ） -->
+                <section class="sections__item -m js-set_chart -count animation slideup_fade" data-chart="count">
+                  <div class="count">5</div>
+                  <div class="sections__item__wrap">
+                    <div class="hd"><h2 class="hd__ttl">平均勤続年数</h2></div>
+                    <div class="contents">
+                      <div class="contents__visual">
+                        <p class="txt">
+                          <span class="js-set_count num" data-num="10">0</span>年
+                          <span class="js-set_count num" data-num="6">0</span>ヶ月
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- 6.平均残業時間（カウントアップのみ） -->
+                <section class="sections__item -m js-set_chart -count animation slideup_fade" data-chart="count">
+                  <div class="count">6</div>
+                  <div class="sections__item__wrap">
+                    <div class="hd"><h2 class="hd__ttl">平均残業時間</h2></div>
+                    <div class="contents">
+                      <div class="contents__visual">
+                        <p class="txt">
+                          <span class="js-set_count num" data-num="0">0</span>時間
+                        </p>
+                      </div>
+                      <div class="contents__annotation">
+                        <p class="txt">残業はほぼございません！</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- 7.職種構成（パイグラフ） -->
+                <section class="sections__item -m js-set_chart -circle2 animation slideup_fade" data-chart="circle">
+                  <div class="count">7</div>
+                  <div class="sections__item__wrap">
+                    <div class="hd"><h2 class="hd__ttl">職種構成</h2></div>
+                    <div class="contents">
+                      <div class="contents__visual">
+                        <canvas class="circleChart"
+                          data-maxWidth='200'
+                          data-maxHeight='200'
+                          data-chart='{"ガイドヘルパー": 54, "児童デイサービス アップル": 29, "生活介護 アップル": 13, "生活支援 アリスファイン": 4}'
+                          data-bg='[#216cc4,#1cc3d2,#eed066,#e37e3b]'></canvas>
+                      </div>
+                      <div class="contents__detail">
+                        <div class="contents__detail__item">
+                          <div class="icon"></div>
+                          <p class="txt">
+                            ガイドヘルパー：<span class="js-set_count num" data-num="54">0</span>%
+                          </p>
+                        </div>
+                        <div class="contents__detail__item">
+                          <div class="icon"></div>
+                          <p class="txt">
+                            児童デイサービス アップル：<span class="js-set_count num" data-num="29">0</span>%
+                          </p>
+                        </div>
+                        <div class="contents__detail__item">
+                          <div class="icon"></div>
+                          <p class="txt">
+                            生活介護 アップル：<span class="js-set_count num" data-num="13">0</span>%
+                          </p>
+                        </div>
+                        <div class="contents__detail__item">
+                          <div class="icon"></div>
+                          <p class="txt">
+                            生活支援 アリスファイン：<span class="js-set_count num" data-num="4">0</span>%
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- 8.お持ちの資格や免許をすべて教えてください（リスト / アコーディオン） -->
+                <section class="sections__item -m js-set_chart -list animation slideup_fade">
+                  <div class="count">8</div>
+                  <div class="sections__item__wrap">
+                    <div class="hd"><h2 class="hd__ttl">お持ちの資格や免許を<br>すべて教えてください</h2></div>
+                    <div class="contents">
+                      <div class="contents__visual">
+                          <div class="contents__visual__item"><p class="txt">看護師資格</p></div>
+                          <div class="contents__visual__item"><p class="txt">ホームヘルパー1級・2級
+                          </p></div>
+                          <div class="contents__visual__item"><p class="txt">介護福祉士
+                          </p></div>
+                          <div class="contents__visual__item"><p class="txt">保育士
+                          </p></div>
+                          <div class="contents__visual__item"><p class="txt">小・中・高等学校教諭
+                          </p></div>
+                          <div class="contents__visual__item"><p class="txt">支援学校教諭
+                          </p></div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- 9.転職者の方は前職をおしえてください（リスト / アコーディオン） -->
+
+                <!-- 10.アリスタッチのイメージをひと言で表すと（リスト / アコーディオン） -->
+
+
+                <!-- 11.仕事の中で心がけていること、あなたならではの工夫を教えてください（吹き出し / アコーディオン） -->
+                <section class="sections__item -m js-set_chart -balloon animation slideup_fade">
+                  <div class="count">11</div>
+                  <div class="sections__item__wrap">
+                    <div class="hd"><h2 class="hd__ttl">仕事の中で心がけていること、<br>あなたならではの工夫を教えてください</h2></div>
+                    <div class="contents">
+                      <div class="contents__visual">
+                          <div class="contents__visual__item">
+                            <div class="icon">
+                              <img src="img/data/ico_human.png" alt="アイコン" class="ofi" loading="lazy">
+                            </div>
+                            <p class="txt">いつも笑顔で</p>
+                          </div>
+                          <div class="contents__visual__item">
+                            <div class="icon">
+                              <img src="img/data/ico_human.png" alt="アイコン" class="ofi" loading="lazy">
+                            </div>
+                            <p class="txt">否定語を使わない</p>
+                          </div>
+                          <div class="contents__visual__item">
+                            <div class="icon">
+                              <img src="img/data/ico_human.png" alt="アイコン" class="ofi" loading="lazy">
+                            </div>
+                            <p class="txt">安全に気をつける（指差確認と復唱）</p>
+                          </div>
+                      </div>
+                      <div class="contents__other">
+                        <div class="contents__other__title">
+                          <h4 class="title">その他のコメント</h4>
+                          <div class="toggle"></div>
+                        </div>
+                        <ul class="contents__other__list">
+                          <li><span>きれいに棚に入る時</span></li>
+                          <li><span>（ボタンを付けたり）ちょっとした事なのにお礼を言われた時</span></li>
+                          <li><span>仲間にありがとうっていわれた時</span></li>
+                          <li><span>汚れが落ちた時</span></li>
+                          <li><span>流れがうまく読めた時</span></li>
+                          <li><span>与えられた仕事を、自分で時間配分し、段取り良くこなせた時です。</span></li>
+                          <li><span>がんばってきたことをほめてもらえた時</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- 12.どんな人と一緒に働きたいですか？ （吹き出し / アコーディオン） -->
+
+                <!-- 13.アリスタッチで働くきっかけは？（吹き出し / アコーディオン） -->
+
+              </div>
+
+              <div class="annotation animation slideup_fade">
+                <p class="txt">2022年4月現在</p>
+              </div>
+            </div>
+          </div>
         </div>
 
 			</main>
@@ -390,7 +673,11 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver,Object.assign"></script>
     <script src="js/vendor/ofi.min.js"></script>
     <!-- プラグイン -->
+    <script src="js/vendor/chart.min.js"></script>
+    <script src="js/vendor/chartjs-plugin-datalabels.js"></script>
+    <script src="js/customChart.js"></script>
     <!-- 固有 -->
     <script src="js/script.js"></script>
+    <script src="js/data.js"></script>
   </body>
 </html>
