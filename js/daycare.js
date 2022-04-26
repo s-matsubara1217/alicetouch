@@ -12,7 +12,7 @@ var listener01 = function(event) {
   if (event.matches) {
     // 835px未満
 
-    // インタビュー 画像
+    // スタッフインタビュー 画像
     ListItemsArr.forEach(function (ListItem) {
       const Target = ListItem.querySelector('.img-holder');
       const Destination = ListItem.querySelector('.term-holder')
@@ -28,7 +28,7 @@ var listener02 = function(event) {
   if (event.matches) {
     // 835px以上
 
-    // インタビュー 画像
+    // スタッフインタビュー 画像
     ListItemsArr.forEach(function (ListItem) {
       const Target = ListItem.querySelector('.img-holder');
       const Destination = ListItem.querySelector('.term-holder')

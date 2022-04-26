@@ -5599,7 +5599,7 @@ a {
 }
 
 /* ============================================
-// インタビュー
+// スタッフインタビュー
 // ==========================================*/
 .lower-interview_l .interview {
   padding-top: 100px;
@@ -9710,7 +9710,7 @@ a {
 }
 
 /* ============================================
-// データで見るアリスタッチ
+// スタッフデータ
 // ==========================================*/
 .lower-data .data__inner {
   position: relative;
@@ -10070,6 +10070,9 @@ a {
   flex: 0 0 33.3%;
   border-right: 1px solid #d5d7d7;
   padding: 12px 0;
+  font-size: 2rem;
+  font-family: "Montserrat";
+  font-weight: bold;
 }
 .lower-data .data .sections__item.-table .contents__visual .table .num-holder .num-box:last-child {
   border-right: none;
@@ -10078,18 +10081,6 @@ a {
   font-size: 2.8rem;
   font-family: "Montserrat";
   font-weight: bold;
-  position: relative;
-  padding-right: 12px;
-}
-.lower-data .data .sections__item.-table .contents__visual .table .num-holder .num:before {
-  content: "%";
-  display: inline-block;
-  font-size: 2rem;
-  font-family: "Montserrat";
-  font-weight: bold;
-  position: absolute;
-  bottom: -6px;
-  right: -8px;
 }
 .lower-data .data .sections__item.-bar .contents {
   margin-top: 40px;
@@ -10430,7 +10421,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
-  padding: 24px 8%;
+  padding: 24px 7%;
   position: relative;
   border: 1px dotted #3c7ecb;
   border-radius: 10px;
@@ -10662,6 +10653,11 @@ a {
   margin-top: 10px;
   padding: 12px 14px;
   border-radius: 2px;
+}
+@media all and (-ms-high-contrast: none) {
+  .lower-data .data .sections__item.-list .contents__visual__item {
+    flex: 0 0 43%;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .lower-data .data .sections__item.-list .contents__visual__item {
